@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{margin: 0; padding: 0; box-sizing: border-box;}
+         ul,li,ol {list-style: none;}
+         a {text-decoration: none;}
+        
+         header {width: 100%; height: 180px; }
+
+         #top {width: 100%; height: 140px; color: #000000; font-style: 나눔고딕, "Nanum Gothic";  border-bottom: 1px solid #f4f4f4;}
+         .top_in {width: 900px; height: 141px; margin: 0 auto; padding-top: 33px; }
+         .inner1 {width: 100%; height: 42px; }
+         .inner1 img {width: 163px; height: 36px; float: left; margin-top: 3px; margin-left: 87px; }
+         .search {width: 364px; height: 42px; float: left; margin-left: 18px; border: 2px solid #f26532; padding-left: 20px; border-radius: 40px; }
+         .search input {float: left; height: 38px; border: none; width: 302px; line-height: 38px; box-sizing: border-box; font-size: 16px; color: #333; font-weight: 600;}
+         .search input[type='button'] {float: left; height: 38px; background: url(img/search-btn.png) no-repeat center center; width: 24px; border: none; cursor: pointer;}
+         .search:after {content: ""; display: block; clear:both; }
+
+         ul.login {float: left;}
+         .login li {float: left; margin-left: 20px; height: 42px; text-align: center; position: relative;}
+         .login li a {display: inline-block; padding-top: 28px; color: #b4b4b4; font-size: 14px; line-height: 1;}
+         .login li:nth-child(1) {background: url(img/login.png) no-repeat center 4px;}
+         .login li:nth-child(2) {background: url(img/my.png) no-repeat center 4px;}
+
+         .top_bottom {padding-top: 34px;}
+         .top_bottom .gnb {float: left; }
+         .top_bottom .gnb:after {content: ""; display: block; clear: both;}
+         .top_bottom .gnb li {float: left; margin-right: 30px;}
+         .top_bottom .gnb li a {display: inline-block; height: 27px; text-indent: -9999px;}
+
+         .top_bottom .gnb li:nth-child(1) a.on { width: 34px; background: url(img/gnb-book-on.png) no-repeat center top; }
+         .top_bottom .gnb li:nth-child(1) a { padding: 0 25px; border-bottom: 4px solid #f26532;}
+         .top_bottom .gnb li:nth-child(2) a {width: 53px; padding: 0 16px; background: url(img/gnb-novel.png) no-repeat center top;}
+         .top_bottom .gnb li:nth-child(3) a {width: 36px; padding: 0 25px; background: url(img/gnb-toon.png) no-repeat center top;}
+
+         .top_bottom .lnb {float: right;}
+         .top_bottom .lnb:after{content: ""; display: block; clear: both;}
+         .top_bottom .lnb li{float: left; background: url(img/lnb-dot.gif) no-repeat center left; padding: 0 10px;}
+         .top_bottom .lnb li a {font-size: 14px; color: #666666; display: inline-block; font-size: 14px; line-height: 1;}
+         .top_bottom .lnb li:first-child {background: none;}
+         .top_bottom .lnb li:first-child(2) {padding-right: 0;}
+         
+         #header_bottom {border-bottom: 1px solid #f4f4f4;}
+         .header_bottom_inner {width: 900px; margin: 0 auto; position: relative;}
+         .n_bottom_left {float: left; width: 53%;}
+         .header_bottom_inner .all-category {float: left;}
+         .header_bottom_inner .all-category a {height: 27px; display: block; padding-top: 12px;}
+
+         .header_bottom_inner .snb-left {float: left; line-height: 17px;}
+         .header_bottom_inner .snb-left li {margin-left: 26px; float: left;}
+         .header_bottom_inner .snb-left li a {display: block; height: 100%; text-indent: -9999px; box-sizing: border-box; padding: 13px 0;}
+         .header_bottom_inner .snb-left li:nth-child(1) a {width: 54px;}
+         .header_bottom_inner .snb-left li:nth-child(1) a.on {background: url(img/snb01-on.png) no-repeat left center;}
+         .header_bottom_inner .snb-left li:nth-child(2) a {width: 42px; background: url(img/snb02.png) no-repeat left center;}
+         .header_bottom_inner .snb-left li:nth-child(3) a {width: 19px; background: url(img/snb03.png) no-repeat left center;}
+         .header_bottom_inner .snb-left li:nth-child(4) a {width: 75px; background: url(img/snb04.png) no-repeat left center;}
+         .header_bottom_inner .snb-left li:nth-child(5) a {width: 28px; background: url(img/snb05.png) no-repeat left center;}
+         .header_bottom_inner .snb-left:after {content: ""; display: block; clear: both;}
+
+         .header_bottom_inner .n_bottom_right {float: right;}
+         .header_bottom_inner .snb-right li {margin-left: 24px; float: left;}
+         .header_bottom_inner .snb-right li a {padding: 13px 0; display: block; height: 100%; box-sizing: border-box; font-weight: bold; color: #333; text-indent: -9999px;}
+         .header_bottom_inner .snb-right li:nth-child(1) a{width: 41px; background: url(img/snb-r-01.png) no-repeat left center;}
+         .header_bottom_inner .snb-right li:nth-child(2) a {width: 28px; background: url(img/snb-r-02.png) no-repeat left center;}
+         .header_bottom_inner .snb-right li:nth-child(3) a {width: 29px; background: url(img/snb-r-03.png) no-repeat left center;}
+         .header_bottom_inner .snb-right li:nth-child(4) a {width: 41px; background: url(img/snb-r-04.png) no-repeat left center;}
+         .header_bottom_inner .snb-right:after {content: ""; display: block; clear: both;}
+
+         /* .header_bottom_inner .m-category {display: none; position: absolute; left: 0; top: 41px; width: 900px; box-sizing: border-box; border: 1px solid #f26532; background: #fff; z-index: 400; border-radius: 4px;}
+         .header_bottom_inner .m-category .category-inner {border: 2px solid #ff9966; position: relative;}
+         .header_bottom_inner .m-category .category-inner div:first-child {border-top: none;}
+         .header_bottom_inner .m-category .category-inner div {padding: 25px 20px 0px; }
+         .header_bottom_inner .m-category .category-inner div p {font-size: 18px; color: #f26532; font-weight: 600;}
+         .header_bottom_inner .m-category .category-inner div ul {padding: 25px 0 25px 5px;}
+         .header_bottom_inner .m-category .category-inner div ul li {float: left; width: 20%; box-sizing: border-box;}
+         .m-category .category-inner div ul li:nth-child(5n+1) a {background: none;} */
+
+
+         
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="top">
+            <div class="top_in">
+                <div class="inner1">
+                    <a href="#"><img src="img/bookcube_logo.png" alt="logo_img"></a>
+
+                    <div class="search">
+                        <input type="text" name="searchString" class="search_input" style="ime-mode:active";>
+                        <input type="button" onclick="frmSearchSubmit()">
+                    </div>
+
+                    <ul class="login">
+                        <li class="btn_login"><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
+                </div>
+
+                <div class="top_bottom">
+                    <ul class="gnb">
+                        <li><a href="#" class="on">서점</a></li>
+                        <li><a href="#">웹소설</a></li>
+                        <li><a href="#">웹툰</a></li>
+                    </ul>
+
+                    <ul class="lnb">
+                        <li><a href="#">캐시충전</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="header_bottom">
+            <div class="header_bottom_inner">
+                <div class="n_bottom_left">
+                    <p class="all-category"><a href="#"><img src="img/all-category.png" alt="전체카테고리"></a></p>
+                    <ul class="snb-left">
+                        <li><a href="#" class="on">일반도서</a></li>
+                        <li><a href="#" class>로맨스</a></li>
+                        <li><a href="#" class>BL</a></li>
+                        <li><a href="#" class>무협/판타지</a></li>
+                        <li><a href="#" class>만화</a></li>
+                    </ul>
+                </div>
+                <div class="n_bottom_right">
+                    <ul class="snb-right">
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">신간</a></li>
+                        <li><a href="#">무료</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="m-category">
+                    <div class="category-inner">
+                        <div>
+                            <p>장르도서</p>
+                            <ul class>
+                                <li><a href="#">로맨스</a></li>
+                                <li><a href="#">BL</a></li>
+                                <li><a href="#">무협/판타지</a></li>
+                                <li><a href="#">만화</a></li>
+                                <li><a href="#">close</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <div id="slider">
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="main_inner"></div>
+
+    <footer>
+        <div id="footer_top"></div>
+        <div id="footer_end"></div>
+    </footer>
+</body>
+</html>
