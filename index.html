@@ -134,6 +134,7 @@
          #category > #category_b > ul {width: 65%; font-size: 15px;}
          #category > #category_b > ul > li {width: auto; height: auto; float: left; background-color: #fff; padding: 7px 20px 10px; margin-left: 17px; border-radius: 13px; cursor: pointer;}
          #category > #category_b > ul > li > i {font-size: 13px; color: #555;}
+         
          /* 순위박스 */
          #category > #chart {width: 100%; height: 1200px;}
          #category > #chart > h2 {height: 10%; text-align: center; line-height: 130px;}
@@ -141,7 +142,25 @@
          /* 문학 */
          #category > #chart > .best >.list {width: 30%; height: 1000px; position: relative; float: left; background-color: #f7f7f7; z-index: -3; box-shadow: 4px 4px 4px #eee;}
          #category > #chart >.best > .list > h3 {width: 100%; line-height: 50px; padding-left: 20px; padding-top: 5px; }
+         #category > #chart >.best > .list > h3:after {content: "더보기 +"; font-size: 14px; color: #777; position: absolute; right: 10px; top: 4px;}
+         #category > #chart >.best > .list > .list_b {width: 100%; position: absolute; bottom: 0; border: 1px solid #eee;}
+         #category > #chart >.best > .list > .list_b > li:first-of-type {width: 358px; height: 100px; background: rgba(0,0,0,0.7); position: absolute; top: -100px; left: 0; border-top: none;}
+         #category > #chart >.best > .list > .list_b > li:nth-of-type(2) {border-top: none;}
+         #category > #chart >.best > .list > .list_b > li {display: flex; flex-wrap: wrap; flex-direction: column;}
+         #category > #chart > .best > .list:not(:first-of-type) {margin-left: 60px;}
          
+
+         /* 신간 */
+         .book5_b {width: 1200px; height: 450px; position: relative; margin: 30px auto;}
+         .book5_b .h2 {border-bottom: 2px solid #eee; padding-bottom: 10px;}
+         .book5_b .h2:after {content: "더보기 +"; font-size: 14px; color: #777; position: absolute; right: 0; top: 10px; cursor: pointer;}
+         .book5_b > .box {display: flex; justify-content: space-around; height: auto; margin-top: 10px;}
+         .book5_b > .box  > .book_b {width: 230px; height: 360px; margin-top: 30px; border: 1px solid #f2f2f2;}
+         .book5_b > .box  > .book_b > h4 {padding: 0 10px 3px 10px;}
+         .book5_b > .box  > .book_b > h4 > a {font-size: 14px;}
+         
+
+
 
 
     </style>
@@ -485,21 +504,735 @@
                             <li class="chart_b_n">
                                 <a href="#"><img src="" alt=""></a>
                                 <h2><a href="#">4 <br> </a></h2>
-                                <h4><a href="#">초대받지 못한 자()휴머니스트 세계 ...</a></h4>
-                                <p>도러시 매카들</p>
+                                <h4><a href="#">그녀와 그(휴머니스트 세계문학 7 ...</a></h4>
+                                <p>조르주 상드</p>
                             </li>
 
                             <li class="chart_b_n">
                                 <a href="#"><img src="" alt=""></a>
                                 <h2><a href="#">5 <br> </a></h2>
-                                <h4><a href="#">백치 1(문학동네 세계문학전집 2 ...</a></h4>
-                                <p>도스토예프스키</p>
+                                <h4><a href="#">초대받지 못한 자(휴머니스트 세계 ...</a></h4>
+                                <p>도러시 매카들</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <h3>TOP5</h3>
+                        <ul class="list_b">
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">1 <br></a></h2>
+                                <h4><a href="#">인간 실격(세계문학전집 103) ...</a></h4>
+                                <p>다자이 오사무</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">2 <br></a></h2>
+                                <h4><a href="#">데미안(세계문학전집 44) ...</a></h4>
+                                <p>헤르만 헤세</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">3 <br></a></h2>
+                                <h4><a href="#">그리스인 조르바(열린책들 세계문학 ...</a></h4>
+                                <p>니코스 카잔차키스</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">4 <br></a></h2>
+                                <h4><a href="#">열린책들 창립 35주년 기념세계 ...</a></h4>
+                                <p>"생텍쥐페리,조지 오웰,어니스트 헤밍웨이,버지니아 울프,오스카 와일드,알렉산드르 뿌쉬낀 표도르 도스또예프스끼 아서 코넌 도일 길버트 키스 체스터턴"</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">5 <br></a></h2>
+                                <h4><a href="#">자기 앞의 생(문학동네 세계문학) ...</a></h4>
+                                <p>로맹 가리(에밀 아자르)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <h3>TOP10</h3>
+                        <ul class="list_b">
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">6 <br></a></h2>
+                                <h4><a href="#">호밀밭의 파수꾼(세계문학전집 47 ...</a></h4>
+                                <p>제롬 데이비드 샐린저</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">7 <br></a></h2>
+                                <h4><a href="#">동물농장(세계문학전집 5) ...</a></h4>
+                                <p>조지오웰</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">8</a></h2>
+                                <h4><a href="#">평범한 인생(열린책들 세계문학 2 ...</a></h4>
+                                <p>카렐 차페크</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">9 <br></a></h2>
+                                <h4><a href="#">열린책들 창립 35주년 기념 세계 ...</a></h4>
+                                <p>"프란츠 카프카,알베르 카뮈,다자이오사무,애드거 앨런 포,기 드 모파상,레프 똘스또이 로버트 루이스 스티븐슨 제임스 조이스 안똔 체호프 허버트 조지 웰스"</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">10 <br></a></h2>
+                                <h4><a href="#">순수의 시대(문학동네 세계문학전집 ...</a></h4>
+                                <p>이디스 워튼</p>
                             </li>
                         </ul>
                     </div>
                 </div>
+                <!-- 경제/경영 -->
+                <div class="best" id="best_economy" style="display:none;">
+                    <div class="list">
+                        <h3>신간 TOP5</h3>
+                        <ul class="list_b">
+                            <li class="chart_b_n">
+                                <a href="#"></a>
+                                <h2><a href="#">1 <br></a></h2>
+                                <h4><a href="#">시골 카페에서 경영을 찾다...</a></h4>
+                                <p>다카이 나오유키</p>
+                            </li>
+                                    
+                            <li class="chart_b_n">
+                                <a href="#"></a>
+                                <h2><a href="#">2 <br></a></h2>
+                                <h4><a href="#">이나모리 가즈오의 회계 경영(양장 ...</a></h4>
+                                <p>이나모리 가즈오</p>
+                            </li>
+                                    
+                            <li class="chart_b_n">
+                                <a href="#"></a>
+                                <h2><a href="#">3 <br></a></h2>
+                                <h4><a href="#">경영을 씹어먹다(UNKNOWN M ...)</a></h4>
+                                <p>장석면</p>
+                            </li>
+                                    
+                            <li class="chart_b_n">
+                                <a href="#"></a>
+                                <h2><a href="#">4 <br></a></h2>
+                                <h4><a href="#">경영(양장본 HardCover) ...</a></h4>
+                                <p>프랑크 아르놀트</p>
+                            </li>
+                                    
+                            <li class="chart_b_n">
+                                <a href="#"></a>
+                                <h2><a href="#">5 <br></a></h2>
+                                <h4><a href="#">미디어 경영론(한국미디어경영학회 ...</a></h4>
+                                <p>김성철,곽규태,김영규.,류민호,박주연</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <h3>TOP5</h3>
+                        <ul class="list_b">
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">1 <br></a></h2>
+                                <h4><a href="#">살에 부자가 된 키라(꿈을 이루게 ...</a></h4>
+                                <p>보도 섀퍼</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">2 <br></a></h2>
+                                <h4><a href="#">2022 에듀윌 매경TEST 기본 ...</a></h4>
+                                <p>신경수</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">3 <br></a></h2>
+                                <h4><a href="#">피터 드러커 어떻게 경영할 것인가 ...</a></h4>
+                                <p>후지타 가쓰토시</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">4 <br></a></h2>
+                                <h4><a href="#">인문의 숲에서 경영을 만나다 1 ...</a></h4>
+                                <p>정진홍</p>
+                            </li>
+
+                            <li class="chart_b">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">5 <br></a></h2>
+                                <h4><a href="#">다산선생 지식경영법(양장본 Har ...</a></h4>
+                                <p>정민</p>
+                            </li>
+                        </ul>
+                    </div>
+                <div class="list">
+                    <h3>TOP10</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">6 <br></a></h2>
+                            <h4><a href="#">우리는 천국으로 출근한다 ...</a></h4>
+                            <p>김종훈</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">7 <br></a></h2>
+                            <h4><a href="#">기획 실무 노트(경영전략전문가 조) ...</a></h4>
+                            <p>조철선</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">8 <br></a></h2>
+                            <h4><a href="#">도쿠가와 이에야스 인간경영 ...</a></h4>
+                            <p>도몬 후유지</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">9 <br></a></h2>
+                            <h4><a href="#">숫자로 경영하라(양장본 HardC ...</a></h4>
+                            <p>최종학</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">10 <br></a></h2>
+                            <h4><a href="#">회사경영 실패의 11가지 법칙 ...</a></h4>
+                            <p>닛케이 탑리더</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 자기계발 -->
+            <div class="best" id="best_self" style="display: none;">
+                <div class="list">
+                    <h3>신간 TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">우리는 우주를 꿈꾼다(양장본 Ha ...</a></h4>
+                            <p>에린 엔트라다 켈리</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">청소년을 위한 꿈꾸는 다락방 꿈노 ...</a></h4>
+                            <p>박영하,신용석,오정택,정영옥</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">오늘도 꿈사탕 가게(길벗스쿨 그림 ...</a></h4>
+                            <p>콘도우 아키</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">달러구트 꿈 백화점 2 ...</a></h4>
+                            <p>이미예</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">꿈꾸는 다락방 1: 공부편(코믹) ...</a></h4>
+                            <p>이지성,Team신화</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">꿈꾸는 다락방(양장본 HardCo ...</a></h4>
+                            <p>이지성</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">대한민국에 이런 학교가 있었어? ...</a></h4>
+                            <p>이승헌</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">나는 오늘도 경제적 자유를 꿈꾼다 ...</a></h4>
+                            <p>청울림(유대열)</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">달러구트 꿈 백화점 ...</a></h4>
+                            <p>이미예</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">열두 살에 부자가 된 키라(꿈을 ...</a></h4>
+                            <p>보도섀퍼</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP10</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">6 <br></a></h2>
+                            <h4><a href="#">꿈의 도시 ...</a></h4>
+                            <p>오쿠다 히데오</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">7 <br></a></h2>
+                            <h4><a href="#">내 꿈은 방울토마토 엄마(처음부터 ...</a></h4>
+                            <p>허윤</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">8 <br></a></h2>
+                            <h4><a href="#">진로 독서(내 꿈을 열어 주는)( ...</a></h4>
+                            <p>임성미</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">9 <br></a></h2>
+                            <h4><a href="#">세상에 너를 소리쳐 ...</a></h4>
+                            <p>빅뱅,김세아</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">10 <br></a></h2>
+                            <h4><a href="#">꿈꾸는 한국사 1 ...</a></h4>
+                            <p>심용환</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 인문 -->
+            <div class="best" id="best_humanity" style="display: none;">
+                <div class="list">
+                    <h3>신간 TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">알고리즘씽킹과 소프트웨어 활용(인 ...</a></h4>
+                            <p>알고리즘씽킹과소프트웨어활용편</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">디자인씽킹과 소프트웨어 문제 해결 ...</a></h4>
+                            <p>디자인씽킹과소프트웨어문제해결</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">인문(2011)(수능 언어 비문학 ...</a></h4>
+                            <p>차마고도</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">이 장면, 나만 불편한가요?(자음 ...</a></h4>
+                            <p>태지원</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">꼰대 아빠와 등골브레이커의 브랜드 ...</a></h4>
+                            <p>김경선</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">인문의 숲에서 경영을 만나다 1 ...</a></h4>
+                            <p>정진홍</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">지리학자의 인문여행 ...</a></h4>
+                            <p>이영민</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">사관학교 기출백서 수학(인문) 1 ...</a></h4>
+                            <p>사관학교입시연구회</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">수학 인문으로 수를 읽다(융합과 ...</a></h4>
+                            <p>이광연</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">인문 고사성어 ...</a></h4>
+                            <p>신동열</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP10</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">6 <br></a></h2>
+                            <h4><a href="#">데카메론(린 인문고전시리즈 1) ...</a></h4>
+                            <p>조반니 보카치오</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">7 <br></a></h2>
+                            <h4><a href="#">콘텐츠(인문잡지 한편 8) ...</a></h4>
+                            <p>이솔,콘노 유키,김윤정,신윤희,천미림,허지우 장유승 조영일 정민경 김찬현</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">8 <br></a></h2>
+                            <h4><a href="#">방법서설(3판)(문예인 문클래식) ...</a></h4>
+                            <p>데카르트</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">9 <br></a></h2>
+                            <h4><a href="#">나를 지키는 최소한의 법 이야기( ...</a></h4>
+                            <p>양지열</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">10 <br></a></h2>
+                            <h4><a href="#">파리로 떠나는 도시산책 인문여행 ...</a></h4>
+                            <p>박성창</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 사회 -->
+            <div class="best" id="best_society" style="display:none;">
+                <div class="list">
+                    <h3>신간 TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">EBS 수능특강 사회탐구영역 사회 ...</a></h4>
+                            <p>EBS교육방송 편집부</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">사회(법과 정치·경제·사회문화) ···</a></h4>
+                            <p>취업종합연구소</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">우공비 일일사회 초등5-2(20 ···</a></h4>
+                            <p>좋은책신사고 편집부</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">EBS 수능 기출의 미래 고등 사 ···</a></h4>
+                            <p>EBS교육방송 편집부</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">한국사회 이해(기본)(사회통합프로 ···</a></h4>
+                            <p>설규주,한진수,구정화,차조일,김찬기</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">우리가 혹하는 이유 ...</a></h4>
+                            <p>존 페트로첼리</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">죽은 시인의 사회 ···</a></h4>
+                            <p>N.H.클라인바움</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">피로사회 ···</a></h4>
+                            <p>한병철</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">불공정사회 ···</a></h4>
+                            <p>이진우</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">초등 사회 3-1(2021)(탐깨 ···</a></h4>
+                            <p>참쌤스쿨 선생님</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP10</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">6 <br></a></h2>
+                            <h4><a href="#">여자들의 사회 ...</a></h4>
+                            <p>권김현영</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">7 <br></a></h2>
+                            <h4><a href="#">2023 에듀윌 사회복지사 1급 ···</a></h4>
+                            <p>손용근,최승희,홍원표,신경안,임화영</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">8 <br></a></h2>
+                            <h4><a href="#">EBS 수능완성 사회탐구영역 사회 ···</a></h4>
+                            <p>EBS교육방송 편집부</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">9 <br></a></h2>
+                            <h4><a href="#">EBS Final 실전모의고사 고 ···</a></h4>
+                            <p>EBS교육방송 편집부</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">10 <br></a></h2>
+                            <h4><a href="#">업스윙 ···</a></h4>
+                            <p>로버트 D. 퍼트넘,셰일린 롬니 가렛</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 여행 -->
+            <div class="best" id="best_travel" style="display:none;">
+                <div class="list">
+                    <h3>신간 TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">유럽여행 영어회화(8문장으로 끝내 ...</a></h4>
+                            <p>황의민</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">재미있는 물리여행(New) ···</a></h4>
+                            <p>루이스 캐럴 엡스타인</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">웰컴 투 삽질여행 ···</a></h4>
+                            <p>서지선</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">지적 대화를 위한 넓고 얕은 지식 ···</a></h4>
+                            <p>채사장</p>
+                        </li>
+
+                        <li class="chart_b_n">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">존리와 함께 떠나는 부자 여행 ···</a></h4>
+                            <p>존리</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP5</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">1 <br></a></h2>
+                            <h4><a href="#">꾸뻬씨의 행복여행 ...</a></h4>
+                            <p>프랑수아 를로르</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">2 <br></a></h2>
+                            <h4><a href="#">여행의 이유 ···</a></h4>
+                            <p>김영하</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">3 <br></a></h2>
+                            <h4><a href="#">타인의 속마음, 심리학자들의 명언 ···</a></h4>
+                            <p>김태현</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">4 <br></a></h2>
+                            <h4><a href="#">존리와 함께 떠나는 부자 여행 1 ···</a></h4>
+                            <p>존리,주성윤</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">5 <br></a></h2>
+                            <h4><a href="#">빨간 모자, 여행을 떠나 시체를 ···</a></h4>
+                            <p>아오야기 아이토</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3>TOP10</h3>
+                    <ul class="list_b">
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">6 <br></a></h2>
+                            <h4><a href="#">여행영어 10분의 기적(해커스톡) ...</a></h4>
+                            <p>해커스 어학연구소</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">7 <br></a></h2>
+                            <h4><a href="#">너와 함께라면 인생도 여행이다 ···</a></h4>
+                            <p>나태주</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">8 <br></a></h2>
+                            <h4><a href="#">카레부부의 주말여행 버킷리스트 ···</a></h4>
+                            <p>조유리</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">9 <br></a></h2>
+                            <h4><a href="#">에드워드 툴레인의 신기한 여행(하 ···</a></h4>
+                            <p>케이트 디카밀로</p>
+                        </li>
+
+                        <li class="chart_b">
+                            <a href="#"><img src="" alt=""></a>
+                            <h2><a href="#">10 <br></a></h2>
+                            <h4><a href="#">여행을 바꾸는 여행 트렌드 ···</a></h4>
+                            <p>김다영</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
+    <!-- 신간 -->
+    <div id="new" class="book5_b">
+        <h2>신간</h2>
+        <div class="box" id="new_b">
+            <div class="book_b">
+                <a href="#"><img src="" alt=""></a>
+                <h4><a href="#">제4차 산업혁명(클라우스 슈밥의) ...</a></h4>
+                <p style="display: none;">클라우스 슈밥</p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src="" alt=""></a>
+                <h4><a href="#">내일은 실험왕 시즌 2 1: 4차산업 혁명과 ...</a></h4>
+                <p style="display: none;">스토리 a.</p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src="" alt=""></a>
+                <h4><a href="#">인공지능과 4차 산업혁명의 미래(십 대가 알아 ...</a></h4>
+                <p style="display: none;">전승민</p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src="" alt=""></a>
+                <h4><a href="#">4차 산업혁명 그 이후 미래의 지배자들 ...</a></h4>
+                <p style="display: none;">최은수</p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src="" alt=""></a>
+                <h4><a href="#">한 권으로 정리하는 4차 산업혁명 ...</a></h4>
+                <p style="display: none;">최진기</p>
+            </div>
+        </div>
+    </div>
+    <!-- 테마로 보는 책 -->
     </section>
 
     <footer>
