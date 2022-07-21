@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <style>
          *{margin: 0; padding: 0; box-sizing: border-box;}
          ul,li,ol {list-style: none;}
          a {text-decoration: none;}
+         h4{display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;}
         
          header {width: 100%; height: 180px; }
 
@@ -80,7 +83,64 @@
          .header_bottom_inner .m-category .category-inner div ul li {float: left; width: 20%; box-sizing: border-box;}
          .m-category .category-inner div ul li:nth-child(5n+1) a {background: none;} */
 
+         /* 슬라이더 */
+         #slider {width: 100%; height: 520px; background-color: #f7f7f7; border-bottom: 1px solid #eee; overflow: hidden; position: relative;}
+         span.prev {left: 300px; }
+         .fas {font-weight: 900; font-family: "Font Awesome 5 Free"; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1;}
+         .fa-chevron-left:before {content: "\f053";}
+         span.next {right: 300px; }
+         #slider >span {font-size: 35px; color: #fff; background: #0007; width: 60px; line-height: 60px; border-radius: 50%; position: absolute; top: 200px; z-index: 5; cursor: pointer; text-align: center;}
+         .fa-chevron-right:before {content: "\f054";}
+         #slider >h2 {text-align: center; padding-top: 35px; height: 80px;}
+         #slider >.box {width: 110%; height: 430px; margin-left: -40px; overflow: hidden;}
+         .box > .book_b {width: 220px; height: 100%; padding: 20px 20px 0px; float: left; position: relative;}
+         .box >.book_b > a > img {width: 180px; height: 260px; margin: 20px 0; border-radius: 10px; box-shadow: 0 0 15px 5px #eee; cursor: pointer;}
+         .box > .book_b > h4 {padding: 0 10px 3px 10px; margin: 0 auto;}
+         .box > .book_b > h4 > a {color: #000;}
+         .box > .book_b > span {color: #666; font-size: 12px; padding-left: 10px;}
+         .box > .book_b > p {width: 180px; height: 260px; border-radius: 10px; position: absolute; top: 40px; left: 20px; background: rgba(0,0,0,0.8); cursor: pointer;}
+         .box > .book_b > p > a {color: #fff; font-size: 15px; display: inline-block; padding: 30px; line-height: 22px;}
 
+         /* 섹션 시작 */
+         section {width: 1300px; height: 3630px; margin: 0 auto;}
+         /* 퀵메뉴 */
+         #quick {width: 1200px; height: 100px; margin: 50px auto; border-radius: 5px; box-shadow: 3px 3px 12px 0px #f6f6f6; border: 1px solid #eee; cursor: pointer;}
+         #quick > li:not(:last-of-type) {border-right: 1px solid #eee;}
+         #quick > li {width: 25%; height: 100%; float: left; display: flex; justify-content: center; position: relative; align-items: center;}
+         #quick > li > i {font-size: 35px; color: #444; margin: 0 35px 0 -10px;}
+         .fa-ticket-alt:before {content: "\f3ff";}
+         #quick > li:first-of-type .circle {background-color: #f0d5d5;}
+         #quick > li:nth-of-type(2) .circle {background-color: #f4f4bf;}
+         #quick > li:nth-of-type(3) .circle {background-color: #cbe9e3;}
+         #quick > li:last-of-type .circle {background-color: #f0d5ed;}
+         #quick > li > .circle {width: 30px; height: 30px; border-radius: 50%; position: absolute; z-index: -1; top: 45px; left: 70px;}
+         #quick > li > p {line-height: 25px; display: inline-block; text-align: start; font-size: 12px; margin-left: 15px; color: #666;}
+         #quick > li > p > span {font-weight: bold; display: block; font-size: 16px; color: #000; }
+         
+         /* 이벤트 베너 */
+         .event {width: 100%; height: 250px; margin: 70px auto; position: relative; overflow: hidden;}
+         .event >.prev {font-size: 35px; color: #aaa; position: absolute; top: 110px; left: 0; cursor: pointer; display: none;}
+         .event >h2 {width: 1200px; padding-bottom: 20px; margin: 0 auto;}
+         .event >h2::after {content: "더보기 +"; font-size: 14px; color: #777; position: absolute; right: 50px; top: 10px; cursor: pointer;}
+         .event > .event_b {width: 1200px; height: 170px; margin: 0 auto; overflow: hidden;}
+         .event > .event_b > img {width: 396px; height: 100%; float: left; cursor: pointer;}
+         .event > .event_b > img:nth-of-type(even) {margin: 0 6px;}
+         .event > .next {font-size: 35px; color: #aaa; position: absolute; top: 110px; right: 0; cursor: pointer; display: none;}
+
+         /* 카테고리별 베스트 */
+         #category {width: 1200px; height: 1280px; margin: 0 auto;}
+         #category > #category_b {width: 100%; height: 80px; background-color: #eee; border-radius: 10px; display: flex; align-items: center;}
+         #category > #category_b > h2 {width: 35%; margin-bottom: 7px; padding-left: 90px;}
+         #category > #category_b > ul {width: 65%; font-size: 15px;}
+         #category > #category_b > ul > li {width: auto; height: auto; float: left; background-color: #fff; padding: 7px 20px 10px; margin-left: 17px; border-radius: 13px; cursor: pointer;}
+         #category > #category_b > ul > li > i {font-size: 13px; color: #555;}
+         /* 순위박스 */
+         #category > #chart {width: 100%; height: 1200px;}
+         #category > #chart > h2 {height: 10%; text-align: center; line-height: 130px;}
+         #category > #chart > .best {width: 100%; height: 100%; position: relative;}
+         /* 문학 */
+         #category > #chart > .best >.list {width: 30%; height: 1000px; position: relative; float: left; background-color: #f7f7f7; z-index: -3; box-shadow: 4px 4px 4px #eee;}
+         #category > #chart >.best > .list > h3 {width: 100%; line-height: 50px; padding-left: 20px; padding-top: 5px; }
          
 
 
@@ -158,12 +218,289 @@
     </header>
 
     <div id="slider">
-        <ul>
-            <li></li>
-        </ul>
+        <span class="prev">
+            <i class="fa-solid fa-angle-left"></i>
+        </span>
+        <span class="next">
+            <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <h2>오늘의 추천</h2>
+        <div class="box" id="recommend">
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">살아온 기적 살아갈 기적</a></h4>
+                <span>장영희</span>
+                <p style="display:none; opacity: 0.999851;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">하마터면 열심히 살 뻔했다</a></h4>
+                <span>하완</span>
+                <p style="display:none; opacity: 0.99972;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">하악하악: 이외수의 생존법</a></h4>
+                <span>이외수</span>
+                <p style="display:none; opacity: 1;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">모래알만 한 진실이라도(윤슬에디션)(양장본 HardCover)</a></h4>
+                <span>박완서</span>
+                <p style="display:none; opacity: 0.998265;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">내 작은 방(박노해 사진 에세이4)(양장본 HardCover)</a></h4>
+                <span>박노해</span>
+                <p style="display:none; opacity: 0.00498817;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">단순하게 단단하게 단아하게(박노해 사진에세이 2)(양장본 HardCover)</a></h4>
+                <span>박노해</span>
+                <p style="display:none; opacity: 6.16838e-0.5;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">당신은 결국 무엇이든 해내는 사람</a></h4>
+                <span>김상현</span>
+                <p style="display:none; opacity: 0.980774;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">살고 싶다는 농담(양장본 HardCover)</a></h4>
+                <span>허지웅</span>
+                <p style="display:none; opacity: 0.53005;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">기쁨이 천 개의 슬픔을 이긴다:삶과 태도에 관하여(조우성 변호사 에세이 1)</a></h4>
+                <span>조우성</span>
+                <p style="display:none; ">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">문학의 숲을 거닐다</a></h4>
+                <span>장영희</span>
+                <p style="display:none; ">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">에세이(2002년 6월호)</a></h4>
+                <span>편집부</span>
+                <p style="display:none;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">빈센트 나의 빈센트</a></h4>
+                <span>정여울</span>
+                <p style="display:none;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">마음의 결</a></h4>
+                <span>태희</span>
+                <p style="display:none; ">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">길(박노해 사진에세이 3)(양장본 HardCover)</a></h4>
+                <span>박노해</span>
+                <p style="display:none; ">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">혼자여서 괜찮은 하루</a></h4>
+                <span>곽정은</span>
+                <p style="display:none; ">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">하루(박노해 사진에세이 1)(양장본 HardCover)</a></h4>
+                <span>박노해</span>
+                <p style="display:none; ">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">죽고 싶지만 떡볶이는 먹고 싶어</a></h4>
+                <span>백세희</span>
+                <p style="display:none;">
+                <a href="#"></a></p>
+            </div>
+
+            <div class="book_b">
+                <a href="#"><img src=""></a>
+                <h4><a href="#">좋은 어른을 위한 에세이</a></h4>
+                <span>김현주</span>
+                <p style="display:none; ">
+                <a href="#"></a></p>
+            </div>
+        </div>
     </div>
 
-    <div id="main_inner"></div>
+    <section>
+        <!-- 퀵메뉴 -->
+        <ul id="quick">
+            <li><i class="fas fa-ticket-alt"></i>
+                <div class="circle"></div>
+                <p><span>최대 50%</span>
+                    "파격가에 만나다!"</p>
+            </li>
+
+            <li><i class="fas fa-book"></i>
+                <div class="circle"></div>
+                <p><span>전문 서적관</span>
+                    "가볍고 편리하게!"</p>
+            </li>
+
+            <li><i class="fas fa-book"></i>
+                <div class="circle"></div>
+                <p><span>오디오북</span>
+                    "귀로 듣는 즐거움!"</p>
+            </li>
+
+            <li><i class="fas fa-gift"></i>
+                <div class="circle"></div>
+                <p><span>이벤트</span>
+                    "다양한 혜택 가득!"</p>
+            </li>
+
+        </ul>
+
+        <!-- 이벤트 베너 -->
+        <div class="event">
+            <span class="prev">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <h2>이벤트</h2>
+            <div class="event_b">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <span class="next">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+        </div>
+
+        <!-- 카테고리별 베스트 -->
+        <div id="category">
+            <div id="category_b">
+                <h2>카테고리별 베스트</h2>
+                <ul>
+                    <li style="border: 1px solid rgb(255,255,255);">문학
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+
+                    <li style="border: 1px solid rgb(255,255,255);">경제/경영
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+
+                    <li style="border: 1px solid rgb(255,255,255);">자기계발
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+
+                    <li style="border: 1px solid rgb(255,255,255);">인문
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+
+                    <li style="border: 1px solid rgb(255,255,255);">사회
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+
+                    <li style="border: 1px solid rgb(255,255,255);">여행
+                        <i class="fas fa-chevron-right"></i>
+                    </li>
+                </ul>
+            </div>
+            <!-- 순위박스 -->
+            <div id="chart">
+                <h2 id="title">문학</h2>
+                <div class="best" id="best_literature" style>
+                    <!--  문학 -->
+                    <div class="list">
+                        <h3>신간 TOP5</h3>
+                        <ul class="list_b">
+                            <li class="chart_b_n">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">1 <br> </a></h2>
+                                <h4><a href="#">마음(열린책들 세계문학 276)(...</a></h4>
+                                <p>나쓰메 소세키</p>
+                            </li>
+
+                            <li class="chart_b_n">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">2 <br> </a></h2>
+                                <h4><a href="#">오만과 편견(세계문학전집 88)(...</a></h4>
+                                <p>제인 오스틴</p>
+                            </li>
+
+                            <li class="chart_b_n">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">3 <br> </a></h2>
+                                <h4><a href="#">1984(세계문학전집 77)...</a></h4>
+                                <p>조지 오웰</p>
+                            </li>
+
+                            <li class="chart_b_n">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">4 <br> </a></h2>
+                                <h4><a href="#">초대받지 못한 자()휴머니스트 세계 ...</a></h4>
+                                <p>도러시 매카들</p>
+                            </li>
+
+                            <li class="chart_b_n">
+                                <a href="#"><img src="" alt=""></a>
+                                <h2><a href="#">5 <br> </a></h2>
+                                <h4><a href="#">백치 1(문학동네 세계문학전집 2 ...</a></h4>
+                                <p>도스토예프스키</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div id="footer_top"></div>
