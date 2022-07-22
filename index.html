@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
+    <script src="js/ajax.js"></script>
+    <script src="js/js.js"></script>
+
+
     <style>
          *{margin: 0; padding: 0; box-sizing: border-box;}
          ul,li,ol {list-style: none;}
@@ -84,22 +90,25 @@
          .m-category .category-inner div ul li:nth-child(5n+1) a {background: none;} */
 
          /* 슬라이더 */
+
+
          #slider {width: 100%; height: 520px; background-color: #f7f7f7; border-bottom: 1px solid #eee; overflow: hidden; position: relative;}
-         span.prev {left: 300px; }
+         #slider > span {font-size: 35px; color: #fff; background: #0007; width: 60px; line-height: 60px; border-radius: 50%; position: absolute; top: 200px; z-index: 5; cursor: pointer; text-align: center;}
+         #slider > .prev {left: 300px; }
+         #slider > .next {right: 300px; }
          .fas {font-weight: 900; font-family: "Font Awesome 5 Free"; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1;}
          .fa-chevron-left:before {content: "\f053";}
-         span.next {right: 300px; }
          #slider >span {font-size: 35px; color: #fff; background: #0007; width: 60px; line-height: 60px; border-radius: 50%; position: absolute; top: 200px; z-index: 5; cursor: pointer; text-align: center;}
          .fa-chevron-right:before {content: "\f054";}
          #slider >h2 {text-align: center; padding-top: 35px; height: 80px;}
          #slider >.box {width: 110%; height: 430px; margin-left: -40px; overflow: hidden;}
          .box > .book_b {width: 220px; height: 100%; padding: 20px 20px 0px; float: left; position: relative;}
-         .box >.book_b > a > img {width: 180px; height: 260px; margin: 20px 0; border-radius: 10px; box-shadow: 0 0 15px 5px #eee; cursor: pointer;}
+         .box >.book_b > img {width: 180px; height: 260px; margin: 20px 0; border-radius: 10px; box-shadow: 0 0 15px 5px #eee; cursor: pointer;}
          .box > .book_b > h4 {padding: 0 10px 3px 10px; margin: 0 auto;}
          .box > .book_b > h4 > a {color: #000;}
          .box > .book_b > span {color: #666; font-size: 12px; padding-left: 10px;}
-         .box > .book_b > p {width: 180px; height: 260px; border-radius: 10px; position: absolute; top: 40px; left: 20px; background: rgba(0,0,0,0.8); cursor: pointer;}
-         .box > .book_b > p > a {color: #fff; font-size: 15px; display: inline-block; padding: 30px; line-height: 22px;}
+         .box > .book_b > p {width: 180px; height: 260px; border-radius: 10px; position: absolute; top: 40px; left: 20px; background: rgba(0,0,0,0.8); cursor: pointer;
+            color: #fff; font-size: 15px; display: inline-block; padding: 30px; line-height: 22px;}
 
          /* 섹션 시작 */
          section {width: 1300px; height: 3630px; margin: 0 auto;}
@@ -245,149 +254,24 @@
         </span>
         <h2>오늘의 추천</h2>
         <div class="box" id="recommend">
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">살아온 기적 살아갈 기적</a></h4>
-                <span>장영희</span>
-                <p style="display:none; opacity: 0.999851;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">하마터면 열심히 살 뻔했다</a></h4>
-                <span>하완</span>
-                <p style="display:none; opacity: 0.99972;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">하악하악: 이외수의 생존법</a></h4>
-                <span>이외수</span>
-                <p style="display:none; opacity: 1;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">모래알만 한 진실이라도(윤슬에디션)(양장본 HardCover)</a></h4>
-                <span>박완서</span>
-                <p style="display:none; opacity: 0.998265;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">내 작은 방(박노해 사진 에세이4)(양장본 HardCover)</a></h4>
-                <span>박노해</span>
-                <p style="display:none; opacity: 0.00498817;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">단순하게 단단하게 단아하게(박노해 사진에세이 2)(양장본 HardCover)</a></h4>
-                <span>박노해</span>
-                <p style="display:none; opacity: 6.16838e-0.5;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">당신은 결국 무엇이든 해내는 사람</a></h4>
-                <span>김상현</span>
-                <p style="display:none; opacity: 0.980774;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">살고 싶다는 농담(양장본 HardCover)</a></h4>
-                <span>허지웅</span>
-                <p style="display:none; opacity: 0.53005;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">기쁨이 천 개의 슬픔을 이긴다:삶과 태도에 관하여(조우성 변호사 에세이 1)</a></h4>
-                <span>조우성</span>
-                <p style="display:none; ">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">문학의 숲을 거닐다</a></h4>
-                <span>장영희</span>
-                <p style="display:none; ">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">에세이(2002년 6월호)</a></h4>
-                <span>편집부</span>
-                <p style="display:none;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">빈센트 나의 빈센트</a></h4>
-                <span>정여울</span>
-                <p style="display:none;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">마음의 결</a></h4>
-                <span>태희</span>
-                <p style="display:none; ">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">길(박노해 사진에세이 3)(양장본 HardCover)</a></h4>
-                <span>박노해</span>
-                <p style="display:none; ">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">혼자여서 괜찮은 하루</a></h4>
-                <span>곽정은</span>
-                <p style="display:none; ">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">하루(박노해 사진에세이 1)(양장본 HardCover)</a></h4>
-                <span>박노해</span>
-                <p style="display:none; ">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">죽고 싶지만 떡볶이는 먹고 싶어</a></h4>
-                <span>백세희</span>
-                <p style="display:none;">
-                <a href="#"></a></p>
-            </div>
-
-            <div class="book_b">
-                <a href="#"><img src=""></a>
-                <h4><a href="#">좋은 어른을 위한 에세이</a></h4>
-                <span>김현주</span>
-                <p style="display:none; ">
-                <a href="#"></a></p>
-            </div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"> </div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
         </div>
     </div>
 
@@ -427,15 +311,15 @@
             </span>
             <h2>이벤트</h2>
             <div class="event_b">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="img/event1.jpg" alt="">
+                <img src="img/event2.jpg" alt="">
+                <img src="img/event3.jpg" alt="">
+                <img src="img/event4.jpg" alt="">
+                <img src="img/event5.jpg" alt="">
+                <img src="img/event6.jpg" alt="">
+                <img src="img/event7.jpg" alt="">
+                <img src="img/event8.jpg" alt="">
+                <img src="img/event9.jpg" alt="">
             </div>
             <span class="next">
                 <i class="fas fa-chevron-right"></i>
@@ -1233,6 +1117,80 @@
         </div>
     </div>
     <!-- 테마로 보는 책 -->
+    <div id="thema">
+        <h2>테마로 보는 책</h2>
+        <span class="prev3"><i class="fas fa-chevron-left"></i></span>
+        <span class="next3"><i class="fas fa-chevron-right"></i></span>
+        <div class="thema_b">
+            <ul id="thema1">
+                <li>AI의 시대</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul id="theam2">
+                <li>Netflix 원작</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="thema_b">
+            <ul id="thema3">
+                <li>인테리어</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul id="thema4">
+                <li>홈트레이닝</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="thema_b">
+            <ul id="thema5">
+                <li>국내여행</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul id="thema6">
+                <li>요리</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 주식 -->
+    <div id="stock" class="book5_b">
+        <h2>주식</h2>
+        <div class="box" id="stock_b">
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+            <div class="book_b"></div>
+        </div>
+    </div>
+    <div class="event">
+        <span class="prev"><i class="fas fa-chevron-left"></i></span>
+        <h2>이벤트</h2>
+        <div class="event_b">
+            <img src="img/event4.jpg" alt="">
+            <img src="img/event5.jpg" alt="">
+            <img src="img/event6.jpg" alt="">
+            <img src="img/event1.jpg" alt="">
+            <img src="img/event2.jpg" alt="">
+            <img src="img/event3.jpg" alt="">
+            <img src="img/event7.jpg" alt="">
+            <img src="img/event8.jpg" alt="">
+            <img src="img/event9.jpg" alt="">
+        </div>
+        <span class="next"><i class="fas fa-chevron-right"></i></span>
+    </div>
     </section>
 
     <footer>
