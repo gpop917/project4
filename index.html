@@ -80,18 +80,7 @@
          .header_bottom_inner .snb-right li:nth-child(4) a {width: 41px; background: url(img/snb-r-04.png) no-repeat left center;}
          .header_bottom_inner .snb-right:after {content: ""; display: block; clear: both;}
 
-         /* .header_bottom_inner .m-category {display: none; position: absolute; left: 0; top: 41px; width: 900px; box-sizing: border-box; border: 1px solid #f26532; background: #fff; z-index: 400; border-radius: 4px;}
-         .header_bottom_inner .m-category .category-inner {border: 2px solid #ff9966; position: relative;}
-         .header_bottom_inner .m-category .category-inner div:first-child {border-top: none;}
-         .header_bottom_inner .m-category .category-inner div {padding: 25px 20px 0px; }
-         .header_bottom_inner .m-category .category-inner div p {font-size: 18px; color: #f26532; font-weight: 600;}
-         .header_bottom_inner .m-category .category-inner div ul {padding: 25px 0 25px 5px;}
-         .header_bottom_inner .m-category .category-inner div ul li {float: left; width: 20%; box-sizing: border-box;}
-         .m-category .category-inner div ul li:nth-child(5n+1) a {background: none;} */
-
          /* 슬라이더 */
-
-
          #slider {width: 100%; height: 520px; background-color: #f7f7f7; border-bottom: 1px solid #eee; overflow: hidden; position: relative;}
          #slider > span {font-size: 35px; color: #fff; background: #0007; width: 60px; line-height: 60px; border-radius: 50%; position: absolute; top: 200px; z-index: 5; cursor: pointer; text-align: center;}
          #slider > .prev {left: 300px; }
@@ -116,13 +105,14 @@
          #quick {width: 1200px; height: 100px; margin: 50px auto; border-radius: 5px; box-shadow: 3px 3px 12px 0px #f6f6f6; border: 1px solid #eee; cursor: pointer;}
          #quick > li:not(:last-of-type) {border-right: 1px solid #eee;}
          #quick > li {width: 25%; height: 100%; float: left; display: flex; justify-content: center; position: relative; align-items: center;}
+        
          #quick > li > i {font-size: 35px; color: #444; margin: 0 35px 0 -10px;}
          .fa-ticket-alt:before {content: "\f3ff";}
+         #quick > li > .circle {width: 30px; height: 30px; border-radius: 50%; position: absolute; z-index: -1; top: 45px; left: 70px;}
          #quick > li:first-of-type .circle {background-color: #f0d5d5;}
          #quick > li:nth-of-type(2) .circle {background-color: #f4f4bf;}
          #quick > li:nth-of-type(3) .circle {background-color: #cbe9e3;}
          #quick > li:last-of-type .circle {background-color: #f0d5ed;}
-         #quick > li > .circle {width: 30px; height: 30px; border-radius: 50%; position: absolute; z-index: -1; top: 45px; left: 70px;}
          #quick > li > p {line-height: 25px; display: inline-block; text-align: start; font-size: 12px; margin-left: 15px; color: #666;}
          #quick > li > p > span {font-weight: bold; display: block; font-size: 16px; color: #000; }
          
@@ -147,16 +137,26 @@
          /* 순위박스 */
          #category > #chart {width: 100%; height: 1200px;}
          #category > #chart > h2 {height: 10%; text-align: center; line-height: 130px;}
+         /* 분야별순위 */
          #category > #chart > .best {width: 100%; height: 100%; position: relative;}
-         /* 문학 */
+         #category > #chart > .best:not(:first-of-type) {display: none;}
          #category > #chart > .best >.list {width: 30%; height: 1000px; position: relative; float: left; background-color: #f7f7f7; z-index: -3; box-shadow: 4px 4px 4px #eee;}
+         #category > #chart > .best > .list:not(:first-of-type) {margin-left: 60px;}
          #category > #chart >.best > .list > h3 {width: 100%; line-height: 50px; padding-left: 20px; padding-top: 5px; }
          #category > #chart >.best > .list > h3:after {content: "더보기 +"; font-size: 14px; color: #777; position: absolute; right: 10px; top: 4px;}
+        
          #category > #chart >.best > .list > .list_b {width: 100%; position: absolute; bottom: 0; border: 1px solid #eee;}
-         #category > #chart >.best > .list > .list_b > li:first-of-type {width: 358px; height: 100px; background: rgba(0,0,0,0.7); position: absolute; top: -100px; left: 0; border-top: none;}
-         #category > #chart >.best > .list > .list_b > li:nth-of-type(2) {border-top: none;}
          #category > #chart >.best > .list > .list_b > li {display: flex; flex-wrap: wrap; flex-direction: column;}
-         #category > #chart > .best > .list:not(:first-of-type) {margin-left: 60px;}
+         #category > #chart >.best > .list > .list_b > li:nth-of-type(2) {border-top: none;}
+         /* 1~5위 */
+         #category > #chart >.best > .list > .list_b > li:first-of-type {width: 358px; height: 100px; background: rgba(0,0,0,0.7); position: absolute; top: -100px; left: 0; border-top: none;}
+         #category > #chart >.best > .list > .list_b > li:first-of-type img {width: 180px; height: 225px; position: absolute; top: -230px; left: 90px; z-index: -1;}
+         #category > #chart >.best > .list > .list_b > li:first-of-type a {color: #fff;}
+         #category > #chart >.best > .list > .list_b > li:first-of-type h2 {position: absolute; top: 5px; left: 55px; font-size: 28px;}
+         #category > #chart >.best > .list > .list_b > li:first-of-type h4 {position: absolute; color: #fff; bottom: 13px; left: 90px; font-size: 18px; width: 60%;}
+         #category > #chart > .best > .list > .list_b > li:first-of-type p {position:absolute; color:#fff; bottom:13px; left:90px; font-size:13px;}
+
+        
          
 
          /* 신간 */
@@ -331,151 +331,47 @@
             <div id="category_b">
                 <h2>카테고리별 베스트</h2>
                 <ul>
-                    <li style="border: 1px solid rgb(255,255,255);">문학
-                        <i class="fas fa-chevron-right"></i>
-                    </li>
-
-                    <li style="border: 1px solid rgb(255,255,255);">경제/경영
-                        <i class="fas fa-chevron-right"></i>
-                    </li>
-
-                    <li style="border: 1px solid rgb(255,255,255);">자기계발
-                        <i class="fas fa-chevron-right"></i>
-                    </li>
-
-                    <li style="border: 1px solid rgb(255,255,255);">인문
-                        <i class="fas fa-chevron-right"></i>
-                    </li>
-
-                    <li style="border: 1px solid rgb(255,255,255);">사회
-                        <i class="fas fa-chevron-right"></i>
-                    </li>
-
-                    <li style="border: 1px solid rgb(255,255,255);">여행
-                        <i class="fas fa-chevron-right"></i>
-                    </li>
+                    <li>문학<i class="fas fa-chevron-right"></i></li>
+                    <li>경제/경영<i class="fas fa-chevron-right"></i></li>
+                    <li>자기계발<i class="fas fa-chevron-right"></i></li>
+                    <li>인문<i class="fas fa-chevron-right"></i></li>
+                    <li>사회<i class="fas fa-chevron-right"></i></li>
+                    <li>여행<i class="fas fa-chevron-right"></i></li>
                 </ul>
             </div>
             <!-- 순위박스 -->
             <div id="chart">
                 <h2 id="title">문학</h2>
-                <div class="best" id="best_literature" style>
+                <div class="best" id="best_literature" >
                     <!--  문학 -->
                     <div class="list">
                         <h3>신간 TOP5</h3>
                         <ul class="list_b">
-                            <li class="chart_b_n">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">1 <br> </a></h2>
-                                <h4><a href="#">마음(열린책들 세계문학 276)(...</a></h4>
-                                <p>나쓰메 소세키</p>
-                            </li>
-
-                            <li class="chart_b_n">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">2 <br> </a></h2>
-                                <h4><a href="#">오만과 편견(세계문학전집 88)(...</a></h4>
-                                <p>제인 오스틴</p>
-                            </li>
-
-                            <li class="chart_b_n">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">3 <br> </a></h2>
-                                <h4><a href="#">1984(세계문학전집 77)...</a></h4>
-                                <p>조지 오웰</p>
-                            </li>
-
-                            <li class="chart_b_n">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">4 <br> </a></h2>
-                                <h4><a href="#">그녀와 그(휴머니스트 세계문학 7 ...</a></h4>
-                                <p>조르주 상드</p>
-                            </li>
-
-                            <li class="chart_b_n">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">5 <br> </a></h2>
-                                <h4><a href="#">초대받지 못한 자(휴머니스트 세계 ...</a></h4>
-                                <p>도러시 매카들</p>
-                            </li>
+                            <li class="chart_b_n"></li>
+                            <li class="chart_b_n"></li>
+                            <li class="chart_b_n"></li>
+                            <li class="chart_b_n"></li>
+                            <li class="chart_b_n"></li>
                         </ul>
                     </div>
                     <div class="list">
                         <h3>TOP5</h3>
                         <ul class="list_b">
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">1 <br></a></h2>
-                                <h4><a href="#">인간 실격(세계문학전집 103) ...</a></h4>
-                                <p>다자이 오사무</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">2 <br></a></h2>
-                                <h4><a href="#">데미안(세계문학전집 44) ...</a></h4>
-                                <p>헤르만 헤세</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">3 <br></a></h2>
-                                <h4><a href="#">그리스인 조르바(열린책들 세계문학 ...</a></h4>
-                                <p>니코스 카잔차키스</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">4 <br></a></h2>
-                                <h4><a href="#">열린책들 창립 35주년 기념세계 ...</a></h4>
-                                <p>"생텍쥐페리,조지 오웰,어니스트 헤밍웨이,버지니아 울프,오스카 와일드,알렉산드르 뿌쉬낀 표도르 도스또예프스끼 아서 코넌 도일 길버트 키스 체스터턴"</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">5 <br></a></h2>
-                                <h4><a href="#">자기 앞의 생(문학동네 세계문학) ...</a></h4>
-                                <p>로맹 가리(에밀 아자르)</p>
-                            </li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
                         </ul>
                     </div>
                     <div class="list">
                         <h3>TOP10</h3>
                         <ul class="list_b">
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">6 <br></a></h2>
-                                <h4><a href="#">호밀밭의 파수꾼(세계문학전집 47 ...</a></h4>
-                                <p>제롬 데이비드 샐린저</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">7 <br></a></h2>
-                                <h4><a href="#">동물농장(세계문학전집 5) ...</a></h4>
-                                <p>조지오웰</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">8</a></h2>
-                                <h4><a href="#">평범한 인생(열린책들 세계문학 2 ...</a></h4>
-                                <p>카렐 차페크</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">9 <br></a></h2>
-                                <h4><a href="#">열린책들 창립 35주년 기념 세계 ...</a></h4>
-                                <p>"프란츠 카프카,알베르 카뮈,다자이오사무,애드거 앨런 포,기 드 모파상,레프 똘스또이 로버트 루이스 스티븐슨 제임스 조이스 안똔 체호프 허버트 조지 웰스"</p>
-                            </li>
-
-                            <li class="chart_b">
-                                <a href="#"><img src="" alt=""></a>
-                                <h2><a href="#">10 <br></a></h2>
-                                <h4><a href="#">순수의 시대(문학동네 세계문학전집 ...</a></h4>
-                                <p>이디스 워튼</p>
-                            </li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
+                            <li class="chart_b"></li>
                         </ul>
                     </div>
                 </div>
