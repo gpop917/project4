@@ -34,7 +34,34 @@ $(function(){
         $(this).css({border:"1px solid #fff"});
     });
 
-       
+    // 테마로 보는 책
+    $('.theam_b:first').nextAll().hide();
+    // 테마로 보는 책 이전 버튼
+        $('.prev3').click(function(){
+            thema_fade_left();
+        });
+        
+        var j=0;
+        function thema_fade_left(){
+            j--;
+            if(j<0){j=2;}
+            $('.thema_b').eq(j).stop().fadeIn();
+            $('.thema_b').eq(j+1).stop().fadeOut('slow');
+        }
+    
+        //테마로 보는 책 다음 버튼 클릭
+        $('.next3').click(function(){
+            thema_fade_right();
+        });
+        
+        function thema_fade_right(){
+            j++;
+            if(j>2){j=0;}
+            //$('.thema_b').stop().fadeOut();
+            $('.thema_b').eq(j).stop().fadeIn();
+            $('.thema_b').eq(j-1).stop().fadeOut('slow');
+        }
+
 
 
 });

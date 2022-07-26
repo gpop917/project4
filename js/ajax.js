@@ -38,7 +38,7 @@ $.ajax({
         size: 20
     },
     headers: {
-        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 
@@ -84,7 +84,7 @@ $.ajax({
         size: 20
     },
     headers: {
-        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 
@@ -126,7 +126,7 @@ $.ajax({
         size: 20
     },
     headers: {
-        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 
@@ -168,7 +168,7 @@ $.ajax({
         size: 20
     },
     headers: {
-        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 
@@ -210,7 +210,7 @@ $.ajax({
         size: 20
     },
     headers: {
-        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 
@@ -252,7 +252,7 @@ $.ajax({
         size: 20
     },
     headers: {
-        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 
@@ -294,7 +294,7 @@ $.ajax({
         query: "4차",
     },
     headers: {
-        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 .done(function(msg) {
@@ -309,6 +309,189 @@ $.ajax({
         $('#new_b > .book_b').eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
         $('#new_b > .book_b').eq(i).append("<h4>" + '<a href="#">' + str2 + " ···</a>" + '</h4>');
         $('#new_b > .book_b').eq(i).append("<p>" + msg.documents[i].authors + "</p>");
+
+    }
+})
+
+//테마로 보는 책 AI
+$.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: {
+        query: "ai",
+    },
+    headers: {
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
+    }
+})
+.done(function(msg) {
+
+    var li = document.getElementsByTagName('li');
+
+    for (var i = 0; i < li.length; i++) {
+
+        var str = msg.documents[i].title;
+        var str2 = str.substring(0, 15);
+
+        $('#thema1 > li').eq(i + 1).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
+        $('#thema1 > li').eq(i + 1).append("<h5>" + '<a href="#">' + str2 + " ···</a>" + '</h5>');
+
+    }
+})
+
+//테마로 보는 책 넷플릭스
+$.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: {
+        query: "nsetflix",
+    },
+    headers: {
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
+    }
+})
+.done(function(msg) {
+
+    var li = document.getElementsByTagName('li');
+
+    for (var i = 0; i < li.length; i++) {
+
+        var str = msg.documents[i].title;
+        var str2 = str.substring(0, 22);
+
+        $('#thema2 > li').eq(i + 1).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
+        $('#thema2 > li').eq(i + 1).append("<h5>" + '<a href="#">' + str2 + " ···</a>" + '</h5>');
+
+    }
+})
+
+//테마로 보는 책 인테리어
+$.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: {
+        query: "인테리어",
+    },
+    headers: {
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
+    }
+})
+.done(function(msg) {
+
+    var li = document.getElementsByTagName('li');
+
+    for (var i = 0; i < li.length; i++) {
+
+        var str = msg.documents[i].title;
+        var str2 = str.substring(0, 15);
+
+        $('#thema3 > li').eq(i + 1).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
+        $('#thema3 > li').eq(i + 1).append("<h5>" + '<a href="#">' + str2 + " ···</a>" + '</h5>');
+
+    }
+})
+
+//테마로 보는 책 홈트
+$.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: {
+        query: "홈트레이닝",
+    },
+    headers: {
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
+    }
+})
+.done(function(msg) {
+
+    var li = document.getElementsByTagName('li');
+
+    for (var i = 0; i < li.length; i++) {
+
+        var str = msg.documents[i].title;
+        var str2 = str.substring(0, 15);
+
+        $('#thema4 > li').eq(i + 1).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
+        $('#thema4 > li').eq(i + 1).append("<h5>" + '<a href="#">' + str2 + " ···</a>" + '</h5>');
+
+    }
+})
+
+//테마로 보는 책 국내여행
+$.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: {
+        query: "국내여행",
+    },
+    headers: {
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
+    }
+})
+.done(function(msg) {
+
+    var li = document.getElementsByTagName('li');
+
+    for (var i = 0; i < li.length; i++) {
+
+        var str = msg.documents[i].title;
+        var str2 = str.substring(0, 15);
+
+        $('#thema5 > li').eq(i + 1).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
+        $('#thema5 > li').eq(i + 1).append("<h5>" + '<a href="#">' + str2 + " ···</a>" + '</h5>');
+
+    }
+})
+
+//테마로 보는 책 요리
+$.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: {
+        query: "요리",
+    },
+    headers: {
+        Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
+    }
+})
+.done(function(msg) {
+
+    var li = document.getElementsByTagName('li');
+
+    for (var i = 0; i < li.length; i++) {
+
+        var str = msg.documents[i].title;
+        var str2 = str.substring(0, 15);
+
+        $('#thema6 > li').eq(i + 1).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
+        $('#thema6 > li').eq(i + 1).append("<h5>" + '<a href="#">' + str2 + " ···</a>" + '</h5>');
+
+    }
+})
+
+//주식 json
+$.ajax({
+    method: "GET",
+    url: "https://dapi.kakao.com/v3/search/book?target=title",
+    data: {
+        query: "주식",
+    },
+    headers: {
+        Authorization: "KakaoAK c32e4c0795f84b719ac13598b015928c"
+    }
+})
+.done(function(msg) {
+
+    var book_b = document.getElementsByClassName('book_b');
+
+    for (var i = 0; i < book_b.length; i++) {
+
+        var str = msg.documents[i].title;
+        var str2 = str.substring(0, 22);
+
+        $('#stock_b > .book_b').eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'>" + '</a>');
+        $('#stock_b > .book_b').eq(i).append("<h4>" + '<a href="#">' + str2 + " ···</a>" + '</h4>');
+        $('#stock_b > .book_b').eq(i).append("<p>" + msg.documents[i].authors + "</p>");
 
     }
 })
