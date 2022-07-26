@@ -8,191 +8,14 @@
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main_css.css">
 
     <script src="js/ajax.js"></script>
     <script src="js/js.js"></script>
 
 
     <style>
-         *{margin: 0; padding: 0; box-sizing: border-box;}
-         ul,li,ol {list-style: none;}
-         a {text-decoration: none;}
-         h4{display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;}
-        
-         header {width: 100%; height: 180px; }
-
-         #top {width: 100%; height: 140px; color: #000000; font-style: 나눔고딕, "Nanum Gothic";  border-bottom: 1px solid #f4f4f4;}
-         .top_in {width: 900px; height: 141px; margin: 0 auto; padding-top: 33px; }
-         .inner1 {width: 100%; height: 42px; }
-         .inner1 img {width: 163px; height: 36px; float: left; margin-top: 3px; margin-left: 87px; }
-         .search {width: 364px; height: 42px; float: left; margin-left: 18px; border: 2px solid #f26532; padding-left: 20px; border-radius: 40px; }
-         .search input {float: left; height: 38px; border: none; width: 302px; line-height: 38px; box-sizing: border-box; font-size: 16px; color: #333; font-weight: 600;}
-         .search input[type='button'] {float: left; height: 38px; background: url(img/search-btn.png) no-repeat center center; width: 24px; border: none; cursor: pointer;}
-         .search:after {content: ""; display: block; clear:both; }
-
-         ul.login {float: left;}
-         .login li {float: left; margin-left: 20px; height: 42px; text-align: center; position: relative;}
-         .login li a {display: inline-block; padding-top: 28px; color: #b4b4b4; font-size: 14px; line-height: 1;}
-         .login li:nth-child(1) {background: url(img/login.png) no-repeat center 4px;}
-         .login li:nth-child(2) {background: url(img/my.png) no-repeat center 4px;}
-
-         .top_bottom {padding-top: 34px;}
-         .top_bottom .gnb {float: left; }
-         .top_bottom .gnb:after {content: ""; display: block; clear: both;}
-         .top_bottom .gnb li {float: left; margin-right: 30px;}
-         .top_bottom .gnb li a {display: inline-block; height: 27px; text-indent: -9999px;}
-
-         .top_bottom .gnb li:nth-child(1) a.on { width: 34px; background: url(img/gnb-book-on.png) no-repeat center top; }
-         .top_bottom .gnb li:nth-child(1) a { padding: 0 25px; border-bottom: 4px solid #f26532;}
-         .top_bottom .gnb li:nth-child(2) a {width: 53px; padding: 0 16px; background: url(img/gnb-novel.png) no-repeat center top;}
-         .top_bottom .gnb li:nth-child(3) a {width: 36px; padding: 0 25px; background: url(img/gnb-toon.png) no-repeat center top;}
-
-         .top_bottom .lnb {float: right;}
-         .top_bottom .lnb:after{content: ""; display: block; clear: both;}
-         .top_bottom .lnb li{float: left; background: url(img/lnb-dot.gif) no-repeat center left; padding: 0 10px;}
-         .top_bottom .lnb li a {font-size: 14px; color: #666666; display: inline-block; font-size: 14px; line-height: 1;}
-         .top_bottom .lnb li:first-child {background: none;}
-         .top_bottom .lnb li:first-child(2) {padding-right: 0;}
-         
-         #header_bottom {border-bottom: 1px solid #f4f4f4;}
-         .header_bottom_inner {width: 900px; margin: 0 auto; position: relative;}
-         .n_bottom_left {float: left; width: 53%;}
-         .header_bottom_inner .all-category {float: left;}
-         .header_bottom_inner .all-category a {height: 27px; display: block; padding-top: 12px;}
-
-         .header_bottom_inner .snb-left {float: left; line-height: 17px;}
-         .header_bottom_inner .snb-left li {margin-left: 26px; float: left;}
-         .header_bottom_inner .snb-left li a {display: block; height: 100%; text-indent: -9999px; box-sizing: border-box; padding: 13px 0;}
-         .header_bottom_inner .snb-left li:nth-child(1) a {width: 54px;}
-         .header_bottom_inner .snb-left li:nth-child(1) a.on {background: url(img/snb01-on.png) no-repeat left center;}
-         .header_bottom_inner .snb-left li:nth-child(2) a {width: 42px; background: url(img/snb02.png) no-repeat left center;}
-         .header_bottom_inner .snb-left li:nth-child(3) a {width: 19px; background: url(img/snb03.png) no-repeat left center;}
-         .header_bottom_inner .snb-left li:nth-child(4) a {width: 75px; background: url(img/snb04.png) no-repeat left center;}
-         .header_bottom_inner .snb-left li:nth-child(5) a {width: 28px; background: url(img/snb05.png) no-repeat left center;}
-         .header_bottom_inner .snb-left:after {content: ""; display: block; clear: both;}
-
-         .header_bottom_inner .n_bottom_right {float: right;}
-         .header_bottom_inner .snb-right li {margin-left: 24px; float: left;}
-         .header_bottom_inner .snb-right li a {padding: 13px 0; display: block; height: 100%; box-sizing: border-box; font-weight: bold; color: #333; text-indent: -9999px;}
-         .header_bottom_inner .snb-right li:nth-child(1) a{width: 41px; background: url(img/snb-r-01.png) no-repeat left center;}
-         .header_bottom_inner .snb-right li:nth-child(2) a {width: 28px; background: url(img/snb-r-02.png) no-repeat left center;}
-         .header_bottom_inner .snb-right li:nth-child(3) a {width: 29px; background: url(img/snb-r-03.png) no-repeat left center;}
-         .header_bottom_inner .snb-right li:nth-child(4) a {width: 41px; background: url(img/snb-r-04.png) no-repeat left center;}
-         .header_bottom_inner .snb-right:after {content: ""; display: block; clear: both;}
-
-         /* 슬라이더 */
-         #slider {width: 100%; height: 520px; background-color: #f7f7f7; border-bottom: 1px solid #eee; overflow: hidden; position: relative;}
-         #slider > span {font-size: 35px; color: #fff; background: #0007; width: 60px; line-height: 60px; border-radius: 50%; position: absolute; top: 200px; z-index: 5; cursor: pointer; text-align: center;}
-         #slider > .prev {left: 300px; }
-         #slider > .next {right: 300px; }
-         .fas {font-weight: 900; font-family: "Font Awesome 5 Free"; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1;}
-         .fa-chevron-left:before {content: "\f053";}
-         #slider >span {font-size: 35px; color: #fff; background: #0007; width: 60px; line-height: 60px; border-radius: 50%; position: absolute; top: 200px; z-index: 5; cursor: pointer; text-align: center;}
-         .fa-chevron-right:before {content: "\f054";}
-         #slider >h2 {text-align: center; padding-top: 35px; height: 80px;}
-         #slider >.box {width: 110%; height: 430px; margin-left: -40px; overflow: hidden;}
-         .box > .book_b {width: 220px; height: 100%; padding: 20px 20px 0px; float: left; position: relative;}
-         .box >.book_b > img {width: 180px; height: 260px; margin: 20px 0; border-radius: 10px; box-shadow: 0 0 15px 5px #eee; cursor: pointer;}
-         .box > .book_b > h4 {padding: 0 10px 3px 10px; margin: 0 auto;}
-         .box > .book_b > h4 > a {color: #000;}
-         .box > .book_b > span {color: #666; font-size: 12px; padding-left: 10px;}
-         .box > .book_b > p {width: 180px; height: 260px; border-radius: 10px; position: absolute; top: 40px; left: 20px; background: rgba(0,0,0,0.8); cursor: pointer;
-            color: #fff; font-size: 15px; display: none; padding: 30px; line-height: 22px;}
-
-         /* 섹션 시작 */
-         section {width: 1300px; height: 3630px; margin: 0 auto;}
-         /* 퀵메뉴 */
-         #quick {width: 1200px; height: 100px; margin: 50px auto; border-radius: 5px; box-shadow: 3px 3px 12px 0px #f6f6f6; border: 1px solid #eee; cursor: pointer;}
-         #quick > li:not(:last-of-type) {border-right: 1px solid #eee;}
-         #quick > li {width: 25%; height: 100%; float: left; display: flex; justify-content: center; position: relative; align-items: center;}
-        
-         #quick > li > i {font-size: 35px; color: #444; margin: 0 35px 0 -10px;}
-         .fa-ticket-alt:before {content: "\f3ff";}
-         #quick > li > .circle {width: 30px; height: 30px; border-radius: 50%; position: absolute; z-index: -1; top: 45px; left: 70px;}
-         #quick > li:first-of-type .circle {background-color: #f0d5d5;}
-         #quick > li:nth-of-type(2) .circle {background-color: #f4f4bf;}
-         #quick > li:nth-of-type(3) .circle {background-color: #cbe9e3;}
-         #quick > li:last-of-type .circle {background-color: #f0d5ed;}
-         #quick > li > p {line-height: 25px; display: inline-block; text-align: start; font-size: 12px; margin-left: 15px; color: #666;}
-         #quick > li > p > span {font-weight: bold; display: block; font-size: 16px; color: #000; }
-         
-         /* 이벤트 베너 */
-         .event {width: 100%; height: 250px; margin: 70px auto; position: relative; overflow: hidden;}
-         .event >.prev {font-size: 35px; color: #aaa; position: absolute; top: 110px; left: 0; cursor: pointer; display: none;}
-         .event >h2 {width: 1200px; padding-bottom: 20px; margin: 0 auto;}
-         .event >h2::after {content: "더보기 +"; font-size: 14px; color: #777; position: absolute; right: 50px; top: 10px; cursor: pointer;}
-         .event > .event_b {width: 1200px; height: 170px; margin: 0 auto; overflow: hidden;}
-         .event > .event_b > img {width: 396px; height: 100%; float: left; cursor: pointer;}
-         .event > .event_b > img:nth-of-type(even) {margin: 0 6px;}
-         .event > .next {font-size: 35px; color: #aaa; position: absolute; top: 110px; right: 0; cursor: pointer; display: none;}
-
-         /* 카테고리별 베스트 */
-         #category {width: 1200px; height: 1280px; margin: 0 auto;}
-         #category > #category_b {width: 100%; height: 80px; background-color: #eee; border-radius: 10px; display: flex; align-items: center;}
-         #category > #category_b > h2 {width: 35%; margin-bottom: 7px; padding-left: 90px;}
-         #category > #category_b > ul {width: 65%; font-size: 15px;}
-         #category > #category_b > ul > li {width: auto; height: auto; float: left; background-color: #fff; padding: 7px 20px 10px; margin-left: 17px; border-radius: 13px; cursor: pointer;}
-         #category > #category_b > ul > li > i {font-size: 13px; color: #555;}
-         
-         /* 순위박스 */
-         #category > #chart {width: 100%; height: 1200px;}
-         #category > #chart > h2 {height: 10%; text-align: center; line-height: 130px;}
-         /* 분야별순위 */
-         #category > #chart > .best {width: 100%; height: 100%; position: relative;}
-         #category > #chart > .best:not(:first-of-type) {display: none;}
-         #category > #chart > .best >.list {width: 30%; height: 1020px; position: relative; float: left; background-color: #f7f7f7; z-index: -3; box-shadow: 4px 4px 4px #eee;}
-         #category > #chart > .best > .list:not(:first-of-type) {margin-left: 60px;}
-         #category > #chart >.best > .list > h3 {width: 100%; line-height: 50px; padding-left: 20px; padding-top: 5px; }
-         #category > #chart >.best > .list > h3:after {content: "더보기 +"; font-size: 14px; color: #777; position: absolute; right: 10px; top: 4px;}
-        
-         #category > #chart >.best > .list > .list_b {width: 100%; position: absolute; top: 300px; border: 1px solid #eee;}
-         #category > #chart >.best > .list > .list_b > li {display: flex; flex-direction: row; border-bottom: 1px solid #eee; }
-         #category > #chart >.best > .list > .list_b > li:nth-of-type(2) {border-top: none; margin-top: 100px; }
-         /* 1~5위 */
-         #category > #chart >.best > .list > .list_b > li:first-of-type {width: 358px; height: 100px; background: rgba(0,0,0,0.7); position: absolute; left: 0; border-top: none;}
-         #category > #chart >.best > .list > .list_b > li:first-of-type img {width: 180px; height: 225px; position: absolute; top: -230px; left: 90px; z-index: -1;}
-         #category > #chart >.best > .list > .list_b > li:first-of-type a {color: #fff;}
-         #category > #chart >.best > .list > .list_b > li:first-of-type h2 {position: absolute; top: 5px; left: 55px; font-size: 28px;}
-         #category > #chart >.best > .list > .list_b > li:first-of-type h4 {position: absolute; color: #fff; margin-top: 10px; left: 90px; font-size: 18px; width: 60%;}
-         #category > #chart > .best > .list > .list_b > li:first-of-type p {position:absolute; color:#fff; bottom:13px; left:90px; font-size:13px;}
-         /* 2위~ */
-         #category > #chart > .best > .list > .list_b > li:not(:first-of-type) img {width: 103px; height: 150px;}
-         #category > #chart > .best > .list > .list_b > li.best:not(:first-of-type) h2 {padding: 15px 0 0 20px;}
-         #category > #chart > .best > .list > .list_b > li:not(:first-of-type) h2 > a {color:#f4642f;}
-         #category > #chart > .best > .list > .list_b > li:not(:first-of-type) h4 {width:240px; padding:0 20px; font-size:15px}
-         #category > #chart > .best > .list > .list_b > li:not(:first-of-type) h4 > a {color:#000;}
-         #category > #chart > .best > .list > .list_b > li:not(:first-of-type) p {color:#666; padding-left:20px; font-size:13px;}
-
-
-         /* 신간, 주식 */
-         .book5_b {width: 1200px; height: 450px; position: relative; margin: 30px auto;}
-         .book5_b > .book5_h2 {border-bottom: 2px solid #eee; padding-bottom: 10px;}
-         .book5_b > .book5_h2:after {content: "더보기 +"; font-size: 14px; color: #777; position: absolute; right: 0; top: 10px; cursor: pointer;}
-         .book5_b > .box {display:flex; justify-content:space-around; height:auto; margin-top:10px;}
-         .book5_b > .box > .book_b {width:230px; height:360px; margin-top:30px; border:1px solid #f2f2f2;}
-         .book5_b > .box > .book_b:hover {background-color: #f7f7f7;}
-         .book5_b > .box > .book_b img {width:180px; height:260px; margin-top:0px; border-radius: 10px; box-shadow:none; margin-left:5px}
-         .book5_b > .box > .book_b > h4 {margin-top:10px; margin-left:5px}
-         .book5_b > .box > .book_b > h4 > a {font-size:14px; }
-         
-         /* 테마로 보는 책 */
-         #thema {width:1200px; height:400px; margin:70px auto; position:relative;}
-         #thema > h2 {width:93%; display:inline-block; line-height:50px;}
-         #thema > span > i {text-align:center; border:1px solid #eee; color:#666; padding:6px 8px; margin-left:8px; cursor:pointer;}
-
-         #thema > .thema_b {width:100%; height:330px; border:1px solid #eee; margin:10px auto; background-color: #f5fbf5; position:absolute;}
-
-         #thema > .thema_b > ul {width:50%; height:300px; margin-top:20px; padding:0 50px; float:left; display:flex; flex-wrap:wrap; justify-content:space-around;}
-         #thema > .thema_b > ul:nth-of-type(odd) {border-right:1px solid #eee;}
-         #thema > .thema_b > ul:nth-of-type(even) {right:0;}
-
-         #thema > .thema_b > ul > li:first-of-type {width:100%; text-align:center; line-height:70px; font-size:18px;}
-         #thema > .thema_b > ul > li img {width:100px; margin-top:-30px;}
-         #thema > .thema_b > ul > li > h5 {width:100px; line-height:18px; padding-top:10px;}
-         #thema > .thema_b > ul > li > h5 > a {color:#333;}
-
-
-
     </style>
 </head>
 <body>
@@ -601,7 +424,7 @@
                 <li></li>
                 <li></li>
             </ul>
-            <ul id="theam2">
+            <ul id="thema2">
                 <li>Netflix 원작</li>
                 <li></li>
                 <li></li>
@@ -667,8 +490,89 @@
     </section>
 
     <footer>
-        <div id="footer_top"></div>
-        <div id="footer_end"></div>
+        <!-- 공지 -->
+        <div id="notice">
+            <div id="notice_b">
+                <h4>공지사항</h4>
+                <table>
+                    <tr>
+                        <td>아이폰 북큐브 앱(v2.2.17) 업데이트 공지</td>
+                        <td>2021-03-10</td>
+                    </tr>
+                    <tr>
+                        <td>북큐브 서버 정기정검 작업 공지 (3/10 04:00~05:00)</td>
+                        <td>2021-03-07</td>
+                    </tr>
+                    <tr>
+                        <td>안드로이드 북큐브 앱 (v2.2.17) 업데이트 공지</td>
+                        <td>2021-03-05</td>
+                    </tr>
+                </table>
+                <span id="prev4"><i class="fas fa-chevron-up"></i></span>
+                <span id="next4"><i class="fas fa-chevron-down"></i></span>
+            </div>
+        </div>
+        <!-- 고객센터 ~ -->
+        <div id="cs">
+            <div id="csc">
+                <h3>고객센터</h3>
+                <p><span>대표번호</span>1588-1925</p>
+                <p><span>운영시간</span>월~금 09:00 - 18:00 (점심시간 12:00 - 13:00) / 주말 및 공휴일 휴무</p>
+            </div>
+            <div id="service">
+                <h3>서비스</h3>
+                <a href="#"><i class="fas fa-desktop"></i>전자도서관</a>
+                <a href="#"><i class="far fa-arrow-alt-circle-down"></i>앱 다운로드</a>
+            </div>
+            <div id="shortcut">
+                <h3>바로가기</h3>
+                <a href="#"><i class="fas fa-ticket-alt"></i>쿠폰등록</a>
+                <a href="#"><i class="fab fa-chromecast"></i>원격 연결</a>
+                <a href="#"><i class="fas fa-coins"></i>북캐시 충전</a>
+                <a href="#"><i class="far fa-user-circle"></i>마이페이지</a>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <div id="footer_wide">
+            <div id="footer_b">
+                <ul id="link">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보보호정책</a></li>
+                    <li><a href="#">청소년보호정책</a></li>
+                    <li><a href="#">사업자정보확인</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">작가/출판사 전용메뉴</a></li>
+                </ul>
+                <ul id="sns1">
+                    <li><i class="fab fa-google-play"></i>Google Play</li>
+                    <li><i class="fab fa-apple"></i>App Store</li>
+                    <li><i class="far fa-clipboard"></i>도서·공연비 소득공제 사업자</li>
+                    <li><i class="far fa-envelope"></i>이메일문의</li>
+                </ul>
+                <ul id="sns2">
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-youtube"></i></li>
+                </ul>
+
+                <ul id="company">
+                    <li>상호 : 주식회사 북큐브네트웍스</li>
+                    <li>대표이사 : 유철종</li>
+                    <li>주소 : 우)08380 서울 구로구 디지털로 33길 27, 삼성IT밸리 514호</li>
+                    <li>사업자 등록번호 : 113-86-24199</li>
+                    <li>통신판매업 신고번호 : 제 2008-서울구로-0747호</li>
+                    <li>개인정보 관리 책임자 : 남지원</li>
+                    <li>도서비 소득공제 대상 사업자 인증번호 : 312018060044</li>
+                    <li>E-mail : webmaster@bookcube.com</li>
+                    <li>전화 : 1588-1925</li>
+                </ul>
+
+                <p>Copyright © BOOKCUBENETWORKS Co.,Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+    
 </body>
 </html>

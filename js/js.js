@@ -35,7 +35,8 @@ $(function(){
     });
 
     // 테마로 보는 책
-    $('.theam_b:first').nextAll().hide();
+    $('.thema_b:nth-of-type(2)').hide();
+    $('.thema_b:nth-of-type(3)').hide();
     // 테마로 보는 책 이전 버튼
         $('.prev3').click(function(){
             thema_fade_left();
@@ -62,6 +63,26 @@ $(function(){
             $('.thema_b').eq(j-1).stop().fadeOut('slow');
         }
 
+//공지사항 애니메이션, 버튼 클릭
+    function notice(){
+        $('#notice_b > table').stop().animate({marginTop:-43},function(){
+            $('#notice_b > table tr:first').appendTo('#notice_b >table');
+            $('#notice_b > table').css({marginTop:0});
+        });
+    }
+    setInterval(notice,3000);
+
+    $('#prev4').click(function(){
+        $('#notice_b > table tr:last').prependTo('#notice_b >table');
+        $('#notice_b > table').css({marginTop:-43});
+        $('#notice_b > table').stop().animate({marginTop:0});
+    });
+    $('#next4').click(function(){
+        $('#notice_b > table').stop().animate({marginTop:-43},function(){
+            $('#notice_b > table tr:first').appendTo('#notice_b >table');
+            $('#notice_b > table').css({marginTop:0});
+        });
+    });
 
 
 });

@@ -326,9 +326,9 @@ $.ajax({
 })
 .done(function(msg) {
 
-    var li = document.getElementsByTagName('li');
+    console.log (msg)
 
-    for (var i = 0; i < li.length; i++) {
+    for (var i = 0; i < 3; i++) {
 
         var str = msg.documents[i].title;
         var str2 = str.substring(0, 15);
@@ -344,17 +344,16 @@ $.ajax({
     method: "GET",
     url: "https://dapi.kakao.com/v3/search/book?target=title",
     data: {
-        query: "nsetflix",
+        query: "netflix",
     },
     headers: {
         Authorization: "KakaoAK 09e623ff3085ea78939dea73206a1dc1"
     }
 })
 .done(function(msg) {
+     console.log (msg)
 
-    var li = document.getElementsByTagName('li');
-
-    for (var i = 0; i < li.length; i++) {
+     for (var i = 0; i < 3; i++) {
 
         var str = msg.documents[i].title;
         var str2 = str.substring(0, 22);
@@ -378,9 +377,9 @@ $.ajax({
 })
 .done(function(msg) {
 
-    var li = document.getElementsByTagName('li');
+    console.log (msg)
 
-    for (var i = 0; i < li.length; i++) {
+    for (var i = 0; i < 3; i++) {
 
         var str = msg.documents[i].title;
         var str2 = str.substring(0, 15);
@@ -404,9 +403,9 @@ $.ajax({
 })
 .done(function(msg) {
 
-    var li = document.getElementsByTagName('li');
+    console.log (msg)
 
-    for (var i = 0; i < li.length; i++) {
+    for (var i = 0; i < 3; i++) {
 
         var str = msg.documents[i].title;
         var str2 = str.substring(0, 15);
@@ -430,9 +429,9 @@ $.ajax({
 })
 .done(function(msg) {
 
-    var li = document.getElementsByTagName('li');
+    console.log (msg)
 
-    for (var i = 0; i < li.length; i++) {
+    for (var i = 0; i < 3; i++) {
 
         var str = msg.documents[i].title;
         var str2 = str.substring(0, 15);
@@ -456,9 +455,9 @@ $.ajax({
 })
 .done(function(msg) {
 
-    var li = document.getElementsByTagName('li');
+    console.log (msg)
 
-    for (var i = 0; i < li.length; i++) {
+    for (var i = 0; i < 3; i++) {
 
         var str = msg.documents[i].title;
         var str2 = str.substring(0, 15);
