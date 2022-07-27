@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKCUBE</title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <script src="./js/js.js"></script>
+    <style>
+        #sub-nav {display: block;}
+        .sub-nav {width: 100%; height: 40px; background: #f4f4f4;}
+        .sub-nav-inner {width: 900px; margin: 0 auto;}
+        .sub-nav-inner p {padding-left: 18px; line-height: 40px; color: #999; font-size: 12px; font-weight: 600;}
+        .sub-nav-inner p a {line-height: 40px; color: #999; font-size: 12px; font-weight: 600;}
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div class="top_in">
+            <div class="inner1">
+                <a href="#"><img src="img/bookcube_logo.png" alt="logo_img"></a>
+
+                <div class="search">
+                    <input type="text" name="searchString" class="search_input" style="ime-mode:active" >
+                    <button type="button" onclick="frmSearchSubmit()" ></button>
+                </div>
+
+                <ul class="login">
+                    <li class="btn_login"><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+
+            <div class="top_bottom">
+                <ul class="gnb">
+                    <li><a href="#" class="on">서점</a></li>
+                    <li><a href="#">웹소설</a></li>
+                    <li><a href="#">웹툰</a></li>
+                </ul>
+
+                <ul class="lnb">
+                    <li><a href="#">캐시충전</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="header_bottom">
+        <div class="header_bottom_inner">
+            <div class="n_bottom_left">
+                <p class="all-category"><a href="#"><img src="img/all-category.png" alt="전체카테고리"></a></p>
+                <ul class="snb-left">
+                    <li><a href="#" class="on">일반도서</a></li>
+                    <li><a href="#" class>로맨스</a></li>
+                    <li><a href="#" class>BL</a></li>
+                    <li><a href="#" class>무협/판타지</a></li>
+                    <li><a href="#" class>만화</a></li>
+                </ul>
+            </div>
+            <div class="n_bottom_right">
+                <ul class="snb-right">
+                    <li><a href="#">베스트</a></li>
+                    <li><a href="#">신간</a></li>
+                    <li><a href="#">무료</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="sub-nav">
+        <div class="sub-nav2">
+            <div class="sub-nav-inner">
+                <p>HOME<a href="#">자기계발</a>
+                    <a href="#">대화법/시간관리</a></p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <!-- 공지 -->
+        <div id="notice">
+            <div id="notice_b">
+                <h4>공지사항</h4>
+                <table>
+                    <tr>
+                        <td>아이폰 북큐브 앱(v2.2.17) 업데이트 공지</td>
+                        <td>2021-03-10</td>
+                    </tr>
+                    <tr>
+                        <td>북큐브 서버 정기정검 작업 공지 (3/10 04:00~05:00)</td>
+                        <td>2021-03-07</td>
+                    </tr>
+                    <tr>
+                        <td>안드로이드 북큐브 앱 (v2.2.17) 업데이트 공지</td>
+                        <td>2021-03-05</td>
+                    </tr>
+                </table>
+                <span id="prev4"><i class="fas fa-chevron-up"></i></span>
+                <span id="next4"><i class="fas fa-chevron-down"></i></span>
+            </div>
+        </div>
+        <!-- 고객센터 ~ -->
+        <div id="cs">
+            <div id="csc">
+                <h3>고객센터</h3>
+                <p><span>대표번호</span>1588-1925</p>
+                <p><span>운영시간</span>월~금 09:00 - 18:00 (점심시간 12:00 - 13:00) / 주말 및 공휴일 휴무</p>
+            </div>
+            <div id="service">
+                <h3>서비스</h3>
+                <a href="#"><i class="fas fa-desktop"></i>전자도서관</a>
+                <a href="#"><i class="far fa-arrow-alt-circle-down"></i>앱 다운로드</a>
+            </div>
+            <div id="shortcut">
+                <h3>바로가기</h3>
+                <a href="#"><i class="fas fa-ticket-alt"></i>쿠폰등록</a>
+                <a href="#"><i class="fab fa-chromecast"></i>원격 연결</a>
+                <a href="#"><i class="fas fa-coins"></i>북캐시 충전</a>
+                <a href="#"><i class="far fa-user-circle"></i>마이페이지</a>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <div id="footer_wide">
+            <div id="footer_b">
+                <ul id="link">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보보호정책</a></li>
+                    <li><a href="#">청소년보호정책</a></li>
+                    <li><a href="#">사업자정보확인</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">작가/출판사 전용메뉴</a></li>
+                </ul>
+                <ul id="sns1">
+                    <li><i class="fab fa-google-play"></i>Google Play</li>
+                    <li><i class="fab fa-apple"></i>App Store</li>
+                    <li><i class="far fa-clipboard"></i>도서·공연비 소득공제 사업자</li>
+                    <li><i class="far fa-envelope"></i>이메일문의</li>
+                </ul>
+                <ul id="sns2">
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-youtube"></i></li>
+                </ul>
+
+                <ul id="company">
+                    <li>상호 : 주식회사 북큐브네트웍스</li>
+                    <li>대표이사 : 유철종</li>
+                    <li>주소 : 우)08380 서울 구로구 디지털로 33길 27, 삼성IT밸리 514호</li>
+                    <li>사업자 등록번호 : 113-86-24199</li>
+                    <li>통신판매업 신고번호 : 제 2008-서울구로-0747호</li>
+                    <li>개인정보 관리 책임자 : 남지원</li>
+                    <li>도서비 소득공제 대상 사업자 인증번호 : 312018060044</li>
+                    <li>E-mail : webmaster@bookcube.com</li>
+                    <li>전화 : 1588-1925</li>
+                </ul>
+
+                <p>Copyright © BOOKCUBENETWORKS Co.,Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</header>
+</body>
+</html>
