@@ -11,12 +11,93 @@
     <link rel="stylesheet" href="./css/common.css">
 
     <script src="./js/js.js"></script>
+    <script src="./js/sub_js.js"></script>
     <style>
-        #sub-nav {display: block;}
-        .sub-nav {width: 100%; height: 40px; background: #f4f4f4;}
-        .sub-nav-inner {width: 900px; margin: 0 auto;}
-        .sub-nav-inner p {padding-left: 18px; line-height: 40px; color: #999; font-size: 12px; font-weight: 600;}
-        .sub-nav-inner p a {line-height: 40px; color: #999; font-size: 12px; font-weight: 600;}
+.btn {text-align: center; border: 1px solid #c1c1c1; box-shadow: 0 2px #f2f2f2; border-radius: 4px; font-weight: 600;}
+em {font-style: normal;}
+button {border: 0; padding: 0; margin: 0; text-decoration: none;}
+table {border: 0; border-collapse: collapse; border-spacing: 0;}
+caption {visibility: hidden; font-size: 0; width: 0; height: 0; line-height: 0;}
+colgroup {display: table-column-group;}
+tr {display: table-row; vertical-align: inherit; border-color: inherit;}
+
+.category-nav{width:100%;height:40px;background:#f4f4f4;}
+.category-nav-inner{width:900px;margin:0 auto;}
+.category-nav-inner p{line-height:40px;color:#999;font-size:12px;font-weight:600;}
+.category-nav-inner p a{line-height:40px;color:#999;font-size:12px;font-weight:600;}
+.detail-title{width:100%;box-sizing:border-box;border-bottom:1px solid #f4f4f4;}
+.detail-title-inner{width:900px;margin:0 auto;padding:17px 0 17px 0;box-sizing:border-box;}
+.detail-title-inner h3{font-size:32px;color:#000;font-weight:normal;line-height:34px;}
+.detail-title-inner p{margin-top:10px;font-size:12px;color:#666;}
+.detail-title-inner p em{display:inline-block;margin:0 6px;}
+
+/* 구매 내용 */
+.detail-inner{width:900px; height: 524px; margin:0 auto;}
+.detail-book{padding-top:35px;position:relative;}
+.detail-book:after{content:"";display:block;clear:both;}
+.detail-book .book-thum{float:left;width:270px;}
+.detail-book .book-thum .figure .thum-box {display: block; position: relative; width: 270px; height: 378px; border-radius: 8px; overflow: hidden;}
+.detail-book .book-thum .figure {width: 270px; height: 378px; box-shadow: 0px 11px 25px 2px rgb(0 0 0 / 30%);}
+.figure {overflow: visible; margin: 0 auto; position: relative;  border-radius: 8px; box-sizing: border-box; transition: .5s;}
+.figure:after {content: ''; box-sizing: border-box; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: hidden; border-radius: 8px; }
+.thum-zoom {cursor: zoom-in;}
+.detail-book .book-thum img{display:block;width:270px;height:378px;}
+.rm_br:after {display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; border: 1px solid rgb(0, 0, 0,0.2); content: ""; border-radius: 8px;} 
+
+/* 이미지 줌 */
+.detail-book .book-thum .early-btn{padding:40px 0;text-align:Center;}
+.detail-book .book-thum .early-btn a{font-size:13px;color:#333;line-height:29px;padding:0 15px;display:inline-block;margin:0 2px;}
+.detail-book .book-thum .figure{width:270px;height:378px;box-shadow:0px 11px 25px 2px rgba(0,0,0,0.3);}
+.detail-book .book-thum .figure .thum-box{display:block;position:relative;width:270px;height:378px;border-radius:8px;overflow:hidden;}
+.detail-book .book-thum .light{left:7px;box-shadow:0 3px 3px 2px rgba(255,255,255,.4);background:rgba(255,255,255,.5);width:3px;}
+.detail-book .book-info{float:left;margin-left:70px;width:524px;box-sizing:border-box;padding-bottom:40px;}
+.thum-zoom-wrap {overflow: hidden; cursor: zoom-out;}
+.img-zoom-wrap {position: fixed;top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; background: #000; opacity: .6;}
+.img-zoom {top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; position: fixed; overflow: hidden;}
+.img-zoom-content { position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; box-sizing: border-box;}
+/* .img-zoom-content:before { content: ""; display: inline-block; height: 100%; vertical-align: middle;} */
+.img-zoom-box { position: relative; display: inline-block; vertical-align: middle; margin: 0 auto; max-width: 100%; z-index: 2000; text-align: right;}
+.img-zoom-box button { position: absolute; right: 0px; display: block; width: 18px; height: 18px; background: url(/images/main/zoom_close.png) no-repeat left center; margin-bottom: 10px; text-indent: -9999px;}
+.img-zoom-box img { display: block; max-width: 480px; width: auto; height: auto; margin: 0 auto; padding: 30px 0 30px 0;}
+/* .img-zoom-pop:after { content: ""; position: absolute; left: 0; top: 30px; bottom: 30px; display: block; right: 0; width: auto; height: auto; z-index: -1; box-shadow: 0 0 8px rgb(0 0 0 / 60%); background: #333;} */
+
+/* 오른쪽 구매 */
+.detail-book .info {float: left; margin-left: 70px; width: 524px; box-sizing: border-box; padding-bottom: 40px;}
+.detail-book .info .all-volume p {font-size: 14px; color: #666; line-height: 18px; margin-bottom: 4px;}
+.detail-book .info .all-volume p span {color: #000; font-weight: 600;}
+.detail-book .info .all-volume p em {display: inline-block; margin: 0 6px;}
+
+
+.detail-book .info .book-side {padding-top: 10px;}
+.detail-book .info .book-side .list-star {float: left; margin-top: 7px; margin-bottom: 0;}
+.list-star {display: inline-block; width: 84px; height: 15px; overflow: hidden; background: url(./img/rank_star_main.png) no-repeat scroll 0% 0% transparent; text-indent: -9999px; vertical-align: middle;}
+.detail-book .info .book-side p.rank-user {margin-left: 5px;}
+.detail-book .info .book-side p {margin-left: 30px; float: left; font-size: 14px; color: #666; font-weight: 600; line-height: 30px;}
+.detail-book .info .book-side p {float: left; font-size: 14px; color: #666; font-weight: 600; line-height: 30px;}
+.detail-book .info .book-side p span {color: #f26532; display: inline-block; margin: 0 2px;}
+.detail-book .info .book-side p.review-user {padding-left: 29px; background: url(./img/review-user.png) no-repeat left center; cursor: pointer;}
+.detail-book .info .book-side .share {margin-left: 30px; padding-left: 29px; background: url(./img/share.png) no-repeat left center; float: left; font-weight: 600; line-height: 30px; display: block; font-size: 14px; color: #666;}
+
+.detail-book .info .cash-info {margin-top: 55px; margin-bottom: 12px; border: 1px solid #eaeaea; box-sizing: border-box; border-radius: 6px; box-shadow: 0 3px #fbfbfb; position: relative;}
+.detail-book .info .cash-info table {width: 100%;}
+.detail-book .info .cash-info table tr {border-bottom: 1px solid#eaeaea; width: 52px; height: 42px;}
+.detail-book .info .cash-info table tr:nth-child(1) th{border-top: none;}
+.detail-book .info .cash-info table th {padding: 8px 17px 8px 30px; text-align: left; font-size: 14px; color: #333; font-weight: 600;}
+.detail-book .info .cash-info table td {font-size: 14px; border-left: 1px solid #eaeaea; font-weight: 600; color: #666; line-height: 24px; padding: 8px 17px 8px 30px; text-align: left;}
+.detail-book .info .cash-info table td em.save {display: inline-block; margin: 0 3px; color: #339966;}
+.detail-book .info .cash-info table td em {font-size: 12px;}
+
+.detail-book .info .support-device {font-size: 14px; color: #666; line-height: 24px; font-weight: 600;}
+.detail-book .info .support-device span {font-weight: 600;}
+.detail-book .info .support-device em {display: block; padding-left: 22px; background: url(./img/tts.png) no-repeat left;}
+.detail-book .info .support-device em.no-tts {background: url(./img/tts.png) no-repeat left center;}
+
+.detail-book .info .detail-btn {padding: 24px 0 30px; position: relative;}
+.detail-book .info .detail-btn > a.d-basket {text-indent: -9999px; border: 1px solid #c1c1c1; width: 50px; box-shadow: 0 2px #f2f2f2; background: transparent;}
+.detail-book .info .detail-btn > a:first-child {margin-left: 0;}
+.detail-book .info .detail-btn > a {float: left; overflow: hidden; transition: all ease .8s; display: block;  height: 50px; box-sizing: border-box; text-align: center; color: #fff; border-radius: 4px; line-height: 49px; font-size: 14px;}
+
+
     </style>
 </head>
 <body>
@@ -73,15 +154,135 @@
         </div>
     </div>
 
-    <div id="sub-nav">
-        <div class="sub-nav2">
-            <div class="sub-nav-inner">
-                <p>HOME<a href="#">자기계발</a>
-                    <a href="#">대화법/시간관리</a></p>
-            </div>
-        </div>
+    <section class="sub">
+		<div class="category-nav">
+			<div class="category-nav-inner">
+				<p>HOME > <a href="/categorylist.asp?mainclass_num=00">문학</a> > <a href="/categorylist.asp?mainclass_num=00&subclass_num=06">국내소설</a></p>
+			</div>
+		</div>
+		<div class="contents-wrap">
+			<div class="detail-wrap">
+				<div class="detail-title">
+					<div class="detail-title-inner">
+						<h3>오직 두 사람</h3>
+						<p></p>
+					</div>
+				</div>
+                <div class="detail-inner">
+					<div class="detail-book">
+						<div class="book-thum">
+							<div class="figure">
+								<div class="thum-box thum-zoom">
+									<span class="rm_br">
+										<img src="./img/bookimg.jpg" alt="도서 이미지 - 오직 두 사람" />		
+									</span>
+									<span class="light"></span>
+								</div>
+							</div>
+							<div class="early-btn"><a href="javascript:;" onClick="book_down_preview('220705019','buy')" class="btn">미리보기</a>
+							</div>
+						</div>
+                        <!-- 이미지 확대
+                       <div class="thum-zoom-wrap">
+                        <div class="img-zoom-wrap"></div>
+                        <div class="img-zoom">
+                            <div class="img-zoom-content">
+                                <div class="omg-zoom-box">
+                                    <div class="img-zoom-pop">
+                                        <button>close</button>
+                                        <img src="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       </div>  -->
 
-    </div>
+                       <div class="info">
+                            <div class="all-volume">
+                                <p>
+                                    <span style="cursor:pointer;">김영하</span>
+                                    저
+                                </p>
+                                <p>
+                                    <span style="cursor:pointer;">복복서가</span>
+                                    <a href="#"></a>
+                                    출판
+                                    <em>|</em>
+                                    2022.07.27
+                                    
+                                </p>
+                            </div>
+
+                            <em>
+                                <div class="book-side">
+                                    <div>
+                                        <span class="list-star rank0"></span>
+                                        <p class="rank-user">
+                                            <span>0.0</span>
+                                            (0명)
+                                        </p>
+
+                                        <p class="review-user">
+                                            서평(
+                                                <span>0</span>
+                                            )
+                                        </p>
+                                        <button class="share">공유하기</button>
+
+                                    </div>
+                                </div>
+                            </em>
+
+                            <div class="cash-info">
+                                <table>
+                                    <colgroup>
+                                        <col width="163px">
+                                        <col width="*">
+                                    </colgroup>
+                                    <tbody>
+										<tr>
+											<th>전자책 정가</th>
+											<td>9,100원</td>
+										</tr>
+										
+										<tr>
+											<th>구매</th>
+											<td>9,100원<em class="save">+3% 적립</em></td>
+										</tr>
+										<tr>
+											<th>출간정보</th>
+											<td>2022.07.27 <em>|</em> EPUB<em>|</em> 50.52MB</td>
+										</tr>
+										<tr>
+											<th><a href="/event_detail.asp?event_num=8957">소득공제 여부</a></th>
+											<td>가능 (대여는 제외)</td>
+										</tr>
+									</tbody>
+                                </table>
+                            </div>
+                            <p class="support-device">
+                                <span>지원 단말기</span>
+                                : IOS 11.0 이상, Android 5.0 이상, PC Window8 OS 이상 지원
+                                <em>듣기(TTS) 지원(모바일에서만 이용 가능)</em>
+                            </p>
+
+                            <div class="detail-btn">
+                                <a href="#" data-order-type="buy" class="d-basket">
+                                    <span>책바구니</span>
+                                </a>
+                                <a href="#" class="d-gift book">
+                                    <span>선물하기</span>
+                                </a>
+                                <a href="#" data-order-type="buy" class="effect-btn bookbuy">
+                                    구매
+                                </a>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
 
 
 

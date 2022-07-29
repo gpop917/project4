@@ -39,7 +39,7 @@ ul.login {float: left;}
 
 
 #header_bottom {border-bottom: 1px solid #f4f4f4;}
-.header_bottom_inner {width: 900px; margin: 0 auto; position: relative;}
+.header_bottom_inner {width: 900px; height: 47px; margin: 0 auto; position: relative;}
 .n_bottom_left {float: left; width: 53%;}
 .header_bottom_inner .all-category {float: left;}
 .header_bottom_inner .all-category a {height: 27px; display: block; padding-top: 12px;}
