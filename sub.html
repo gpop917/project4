@@ -9,94 +9,10 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link rel="stylesheet" href="./css/common.css">
-
+    <link rel="stylesheet" href="./css/sub_css.css">
     <script src="./js/js.js"></script>
     <script src="./js/sub_js.js"></script>
     <style>
-.btn {text-align: center; border: 1px solid #c1c1c1; box-shadow: 0 2px #f2f2f2; border-radius: 4px; font-weight: 600;}
-em {font-style: normal;}
-button {border: 0; padding: 0; margin: 0; text-decoration: none;}
-table {border: 0; border-collapse: collapse; border-spacing: 0;}
-caption {visibility: hidden; font-size: 0; width: 0; height: 0; line-height: 0;}
-colgroup {display: table-column-group;}
-tr {display: table-row; vertical-align: inherit; border-color: inherit;}
-
-.category-nav{width:100%;height:40px;background:#f4f4f4;}
-.category-nav-inner{width:900px;margin:0 auto;}
-.category-nav-inner p{line-height:40px;color:#999;font-size:12px;font-weight:600;}
-.category-nav-inner p a{line-height:40px;color:#999;font-size:12px;font-weight:600;}
-.detail-title{width:100%;box-sizing:border-box;border-bottom:1px solid #f4f4f4;}
-.detail-title-inner{width:900px;margin:0 auto;padding:17px 0 17px 0;box-sizing:border-box;}
-.detail-title-inner h3{font-size:32px;color:#000;font-weight:normal;line-height:34px;}
-.detail-title-inner p{margin-top:10px;font-size:12px;color:#666;}
-.detail-title-inner p em{display:inline-block;margin:0 6px;}
-
-/* 구매 내용 */
-.detail-inner{width:900px; height: 524px; margin:0 auto;}
-.detail-book{padding-top:35px;position:relative;}
-.detail-book:after{content:"";display:block;clear:both;}
-.detail-book .book-thum{float:left;width:270px;}
-.detail-book .book-thum .figure .thum-box {display: block; position: relative; width: 270px; height: 378px; border-radius: 8px; overflow: hidden;}
-.detail-book .book-thum .figure {width: 270px; height: 378px; box-shadow: 0px 11px 25px 2px rgb(0 0 0 / 30%);}
-.figure {overflow: visible; margin: 0 auto; position: relative;  border-radius: 8px; box-sizing: border-box; transition: .5s;}
-.figure:after {content: ''; box-sizing: border-box; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; overflow: hidden; border-radius: 8px; }
-.thum-zoom {cursor: zoom-in;}
-.detail-book .book-thum img{display:block;width:270px;height:378px;}
-.rm_br:after {display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; border: 1px solid rgb(0, 0, 0,0.2); content: ""; border-radius: 8px;} 
-
-/* 이미지 줌 */
-.detail-book .book-thum .early-btn{padding:40px 0;text-align:Center;}
-.detail-book .book-thum .early-btn a{font-size:13px;color:#333;line-height:29px;padding:0 15px;display:inline-block;margin:0 2px;}
-.detail-book .book-thum .figure{width:270px;height:378px;box-shadow:0px 11px 25px 2px rgba(0,0,0,0.3);}
-.detail-book .book-thum .figure .thum-box{display:block;position:relative;width:270px;height:378px;border-radius:8px;overflow:hidden;}
-.detail-book .book-thum .light{left:7px;box-shadow:0 3px 3px 2px rgba(255,255,255,.4);background:rgba(255,255,255,.5);width:3px;}
-.detail-book .book-info{float:left;margin-left:70px;width:524px;box-sizing:border-box;padding-bottom:40px;}
-.thum-zoom-wrap {overflow: hidden; cursor: zoom-out;}
-.img-zoom-wrap {position: fixed;top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; background: #000; opacity: .6;}
-.img-zoom {top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; position: fixed; overflow: hidden;}
-.img-zoom-content { position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; box-sizing: border-box;}
-/* .img-zoom-content:before { content: ""; display: inline-block; height: 100%; vertical-align: middle;} */
-.img-zoom-box { position: relative; display: inline-block; vertical-align: middle; margin: 0 auto; max-width: 100%; z-index: 2000; text-align: right;}
-.img-zoom-box button { position: absolute; right: 0px; display: block; width: 18px; height: 18px; background: url(/images/main/zoom_close.png) no-repeat left center; margin-bottom: 10px; text-indent: -9999px;}
-.img-zoom-box img { display: block; max-width: 480px; width: auto; height: auto; margin: 0 auto; padding: 30px 0 30px 0;}
-/* .img-zoom-pop:after { content: ""; position: absolute; left: 0; top: 30px; bottom: 30px; display: block; right: 0; width: auto; height: auto; z-index: -1; box-shadow: 0 0 8px rgb(0 0 0 / 60%); background: #333;} */
-
-/* 오른쪽 구매 */
-.detail-book .info {float: left; margin-left: 70px; width: 524px; box-sizing: border-box; padding-bottom: 40px;}
-.detail-book .info .all-volume p {font-size: 14px; color: #666; line-height: 18px; margin-bottom: 4px;}
-.detail-book .info .all-volume p span {color: #000; font-weight: 600;}
-.detail-book .info .all-volume p em {display: inline-block; margin: 0 6px;}
-
-
-.detail-book .info .book-side {padding-top: 10px;}
-.detail-book .info .book-side .list-star {float: left; margin-top: 7px; margin-bottom: 0;}
-.list-star {display: inline-block; width: 84px; height: 15px; overflow: hidden; background: url(./img/rank_star_main.png) no-repeat scroll 0% 0% transparent; text-indent: -9999px; vertical-align: middle;}
-.detail-book .info .book-side p.rank-user {margin-left: 5px;}
-.detail-book .info .book-side p {margin-left: 30px; float: left; font-size: 14px; color: #666; font-weight: 600; line-height: 30px;}
-.detail-book .info .book-side p {float: left; font-size: 14px; color: #666; font-weight: 600; line-height: 30px;}
-.detail-book .info .book-side p span {color: #f26532; display: inline-block; margin: 0 2px;}
-.detail-book .info .book-side p.review-user {padding-left: 29px; background: url(./img/review-user.png) no-repeat left center; cursor: pointer;}
-.detail-book .info .book-side .share {margin-left: 30px; padding-left: 29px; background: url(./img/share.png) no-repeat left center; float: left; font-weight: 600; line-height: 30px; display: block; font-size: 14px; color: #666;}
-
-.detail-book .info .cash-info {margin-top: 55px; margin-bottom: 12px; border: 1px solid #eaeaea; box-sizing: border-box; border-radius: 6px; box-shadow: 0 3px #fbfbfb; position: relative;}
-.detail-book .info .cash-info table {width: 100%;}
-.detail-book .info .cash-info table tr {border-bottom: 1px solid#eaeaea; width: 52px; height: 42px;}
-.detail-book .info .cash-info table tr:nth-child(1) th{border-top: none;}
-.detail-book .info .cash-info table th {padding: 8px 17px 8px 30px; text-align: left; font-size: 14px; color: #333; font-weight: 600;}
-.detail-book .info .cash-info table td {font-size: 14px; border-left: 1px solid #eaeaea; font-weight: 600; color: #666; line-height: 24px; padding: 8px 17px 8px 30px; text-align: left;}
-.detail-book .info .cash-info table td em.save {display: inline-block; margin: 0 3px; color: #339966;}
-.detail-book .info .cash-info table td em {font-size: 12px;}
-
-.detail-book .info .support-device {font-size: 14px; color: #666; line-height: 24px; font-weight: 600;}
-.detail-book .info .support-device span {font-weight: 600;}
-.detail-book .info .support-device em {display: block; padding-left: 22px; background: url(./img/tts.png) no-repeat left;}
-.detail-book .info .support-device em.no-tts {background: url(./img/tts.png) no-repeat left center;}
-
-.detail-book .info .detail-btn {padding: 24px 0 30px; position: relative;}
-.detail-book .info .detail-btn > a.d-basket {text-indent: -9999px; border: 1px solid #c1c1c1; width: 50px; box-shadow: 0 2px #f2f2f2; background: transparent;}
-.detail-book .info .detail-btn > a:first-child {margin-left: 0;}
-.detail-book .info .detail-btn > a {float: left; overflow: hidden; transition: all ease .8s; display: block;  height: 50px; box-sizing: border-box; text-align: center; color: #fff; border-radius: 4px; line-height: 49px; font-size: 14px;}
-
 
     </style>
 </head>
@@ -270,10 +186,10 @@ tr {display: table-row; vertical-align: inherit; border-color: inherit;}
                                 <a href="#" data-order-type="buy" class="d-basket">
                                     <span>책바구니</span>
                                 </a>
-                                <a href="#" class="d-gift book">
+                                <a href="#" class="d-gift">
                                     <span>선물하기</span>
                                 </a>
-                                <a href="#" data-order-type="buy" class="effect-btn bookbuy">
+                                <a href="#" data-order-type="buy" class="effect-btn">
                                     구매
                                 </a>
                             </div>
@@ -282,6 +198,128 @@ tr {display: table-row; vertical-align: inherit; border-color: inherit;}
                 </div>
             </div>  
         </div>
+
+        <!--이 책과 함께 구매한 책-->
+        <div id="with" class="book5_b">
+            <h2>이 책과 함께 구매한 책</h2>
+            <div class="box" id="with_b">
+                <div class="book_b"></div>
+                <div class="book_b"></div>
+                <div class="book_b"></div>
+                <div class="book_b"></div>
+                <div class="book_b"></div>
+            </div>
+        </div>
+        <div id="wrap_center_side">
+
+            <!--중앙-->
+            <div id="center">
+                <!--상품정보-->
+                <div id="information">
+                    <ul class="tab">
+                        <li class="select_tab">상품정보</li>
+                        <li><a href="#review">회원리뷰</a></li>
+                        <li><a href="#guide">반품/교환</a></li>
+                    </ul>
+                    <div id="info">
+                        <h3>상품정보</h3>
+                        <table>
+                            <tr>
+                                <th>출간일</th>
+                                <td>2020년 07월 27일</td>
+                            </tr>
+                            <tr>
+                                <th>쪽수, 무게, 크기</th>
+                                <td>348쪽 | 552g | 145*210*22mm</td>
+                            </tr>
+                            <tr>
+                                <th>ISBN13</th>
+                                <td>9791130604626</td>
+                            </tr>
+                            <tr>
+                                <th>ISBN10</th>
+                                <td>1130604624</td>
+                            </tr>
+                        </table>
+                        <h3>관련분류</h3>
+                        <h4>카테고리 분류</h4>
+                        <p>국내도서 > 청소년 > 공부법</p>
+                        <p>국내도서 > 청소년 > 에세이</p>
+                    </div>
+                    <!--도서 상세페이지 이미지-->
+                    <h3>책 소개 이미지</h3>
+                    <div id="img_b">
+                        <img src="./img/intro.jpg" alt="">
+                    </div>
+                    <div id="unfold">펼쳐보기</div>
+                    <div id="fold">접기</div>
+                </div>
+
+                <!--회원리뷰-->
+                <div id="review">
+                    <ul class="tab">
+                        <li><a href="#info">상품정보</a></li>
+                        <li class="select_tab">회원리뷰</li>
+                        <li><a href="#guide">반품/교환</a></li>
+                    </ul>
+                    <div id="review_b">
+                        <h3>회원리뷰</h3>
+                        <table>
+                            <tr>
+                                <td><span>구매</span><span>주간우수작</span></td>
+                                <td>이토록 공부가 재미있어지는 순간</td>
+                                <td>내용 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 편집/디자인 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+                                <td>2021-03-11</td>
+                                <td>이토록 공부가 재미있어지는 순간을 직접 경험한 나에게 무척이나 관심이 가는 책제목이었습니다. 이 책의 저자는 아무리 좋은 공부법을 알아도, 국내에서 가장 유명한 강사의 수업을 들어도 ‘공부하고자 하는 단단한 마음’과 ‘공부의 재미’를 느끼지 못한다면 결코 성적을 올릴 수 없으리라 단언한다.</td>
+                                <td>55명이 이 리뷰를 추천합니다.</td>
+                            </tr>
+                            <tr>
+                                <td><span>구매</span></td>
+                                <td>인생은 마음가짐</td>
+                                <td>내용 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 편집/디자인 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+                                <td>2021-03-11</td>
+                                <td>카드뉴스보고 관심이 생겨 구매하였어요. 사실 두꺼운 책이라 초등학생인 우리 아이에게 어쩌면 조금 거부감 있는 책일 수도 있겠다 싶었어요. 일단은 책을 사주고 시간이 날 때 읽으라고 했는데 자기 전에 조금씩 읽기 시작하더라구요. 다른 책도 읽어가면서 읽은 거라 읽는데 제법 오랜 시간이 걸렸어요.</td>
+                                <td>55명이 이 리뷰를 추천합니다.</td>
+                            </tr>
+                            <tr>
+                                <td><span>구매</span><span>주간우수작</span></td>
+                                <td>공부를 재미있게 할 수 있는 방법은 나의 마음가짐이다.</td>
+                                <td>내용 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 편집/디자인 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+                                <td>2021-03-11</td>
+                                <td>이토록 공부가 재미있어지는 순간을 직접 경험한 나에게 무척이나 관심이 가는 책제목이었습니다. 이 책의 저자는 아무리 좋은 공부법을 알아도, 국내에서 가장 유명한 강사의 수업을 들어도 ‘공부하고자 하는 단단한 마음’과 ‘공부의 재미’를 느끼지 못한다면 결코 성적을 올릴 수 없으리라 단언한다.</td>
+                                <td>55명이 이 리뷰를 추천합니다.</td>
+                            </tr>
+                        </table>
+                        <div id="page">
+                            <ul>
+                                <li><a href="#">&lt;</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">&gt;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <!--반품/교환-->
+                 <div id="guide">
+                    <ul class="tab">
+                        <li><a href="#info">상품정보</a></li>
+                        <li><a href="#review">회원리뷰</a></li>
+                        <li class="select_tab">반품/교환</li>
+                    </ul>
+                    <div class="sub-txtbox"></div>
+                </div>
+            </div>
+            </div>
     </section>
 
 
