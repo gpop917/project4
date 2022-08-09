@@ -55,27 +55,27 @@ tr {display: table-row; vertical-align: inherit; border-color: inherit;}
 
 .detail-book .info .book-side {padding-top: 10px;}
 .detail-book .info .book-side .list-star {float: left; margin-top: 7px; margin-bottom: 0;}
-.list-star {display: inline-block; width: 84px; height: 15px; overflow: hidden; background: url(./img/rank_star_main.png) no-repeat scroll 0% 0% transparent; text-indent: -9999px; vertical-align: middle;}
+.list-star {display: inline-block; width: 84px; height: 15px; overflow: hidden; background: url(../img/rank_star_main.png) no-repeat scroll 0% 0% transparent; text-indent: -9999px; vertical-align: middle;}
 .detail-book .info .book-side p.rank-user {margin-left: 5px;}
 .detail-book .info .book-side p {margin-left: 30px; float: left; font-size: 14px; color: #666; font-weight: 600; line-height: 30px;}
 .detail-book .info .book-side p {float: left; font-size: 14px; color: #666; font-weight: 600; line-height: 30px;}
 .detail-book .info .book-side p span {color: #f26532; display: inline-block; margin: 0 2px;}
-.detail-book .info .book-side p.review-user {padding-left: 29px; background: url(./img/review-user.png) no-repeat left center; cursor: pointer;}
-.detail-book .info .book-side .share {margin-left: 30px; padding-left: 29px; background: url(./img/share.png) no-repeat left center; float: left; font-weight: 600; line-height: 30px; display: block; font-size: 14px; color: #666;}
+.detail-book .info .book-side p.review-user {padding-left: 29px; background: url(../img/review-user.png) no-repeat left center; cursor: pointer;}
+.detail-book .info .book-side .share {margin-left: 30px; padding-left: 29px; background: url(../img/share.png) no-repeat left center; float: left; font-weight: 600; line-height: 30px; display: block; font-size: 14px; color: #666;}
 
 .detail-book .info .cash-info {margin-top: 55px; margin-bottom: 12px; border: 1px solid #eaeaea; box-sizing: border-box; border-radius: 6px; box-shadow: 0 3px #fbfbfb; position: relative;}
 .detail-book .info .cash-info table {width: 100%;}
 .detail-book .info .cash-info table tr {border-bottom: 1px solid#eaeaea; width: 52px; height: 42px;}
 .detail-book .info .cash-info table tr:nth-child(1) th{border-top: none;}
-.detail-book .info .cash-info table th {padding: 8px 17px 8px 30px; text-align: left; font-size: 14px; color: #333; font-weight: 600;}
+.detail-book .info .cash-info table th { width: 163px; padding: 8px 17px 8px 30px; text-align: left; font-size: 14px; color: #333; font-weight: 600;}
 .detail-book .info .cash-info table td {font-size: 14px; border-left: 1px solid #eaeaea; font-weight: 600; color: #666; line-height: 24px; padding: 8px 17px 8px 30px; text-align: left;}
 .detail-book .info .cash-info table td em.save {display: inline-block; margin: 0 3px; color: #339966;}
 .detail-book .info .cash-info table td em {font-size: 12px;}
 
 .detail-book .info .support-device {font-size: 14px; color: #666; line-height: 24px; font-weight: 600;}
 .detail-book .info .support-device span {font-weight: 600;}
-.detail-book .info .support-device em {display: block; padding-left: 22px; background: url(./img/tts.png) no-repeat left;}
-.detail-book .info .support-device em.no-tts {background: url(./img/tts.png) no-repeat left center;}
+.detail-book .info .support-device em {display: block; padding-left: 22px; background: url(../img/tts.png) no-repeat left;}
+.detail-book .info .support-device em.no-tts {background: url(../img/tts.png) no-repeat left center;}
 
 .detail-book .info .detail-btn {width: 524px; height: 104px; padding: 24px 0 30px; position: relative; font-size: 12px;}
 .detail-book .info .detail-btn > a.d-basket {text-indent: -9999px; border: 1px solid #c1c1c1; width: 50px; box-shadow: 0 2px #f2f2f2; background: transparent;}
